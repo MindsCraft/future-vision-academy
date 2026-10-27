@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ফিউচার ভিশন একাডেমি — গফরগাঁও, ময়মনসিংহ | Future Vision Academy</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Hind Siliguri', 'Inter', system-ui, sans-serif;
+    }
+    
+    .photo-placeholder {
+      background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 0%, #f8fafc 100%);
+      border: 2px dashed #93c5fd;
+      transition: all 0.2s ease;
+    }
+    .photo-placeholder:hover {
+      border-color: #2563eb;
+      background: #eff6ff;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+  <!-- Top Slim Utility Bar (Clean & Quiet) -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-1.5 px-4">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-2xs font-bold bg-amber-400 text-slate-900">ভর্তি চলছে</span>
+        <span>প্লে থেকে ৮ম শ্রেণিতে নতুন শিক্ষাবর্ষে ভর্তি চলছে</span>
+      </div>
+      <div class="flex items-center gap-4 text-2xs text-slate-400">
+        <span>📍 পশু হাসপাতাল রোড, গফরগাঁও</span>
+        <span>•</span>
+        <a href="https://www.facebook.com/profile.php?id=61595188603461" target="_blank" rel="noopener noreferrer" class="hover:text-white flex items-center gap-1 transition">
+          <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>ফেসবুক পেজ</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation (Clean, Focused, 3 Links Only) -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      
+      <!-- Brand Logo & Name -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="relative w-11 h-11 rounded-xl bg-white border border-blue-200 shadow-xs flex items-center justify-center font-bold text-xl overflow-hidden shrink-0 p-1">
+          <img 
+            src="./public/images/logo.png" 
+            alt="Future Vision Academy Logo" 
+            class="w-full h-full object-contain"
+            onerror="if(!this.dataset.retried){this.dataset.retried='1'; this.src='/images/logo.png';} else {this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';}"
+          />
+          <div id="logo-fallback" class="absolute inset-0 bg-blue-700 flex items-center justify-center text-white font-bold text-xl" style="display: none;">
+            🎓
+          </div>
+        </div>
+        <div>
+          <h1 class="font-bold text-base md:text-lg text-slate-900 leading-tight group-hover:text-blue-700 transition">ফিউচার ভিশন একাডেমি</h1>
+          <p class="text-xs text-slate-500 font-medium">গফরগাঁও, ময়মনসিংহ</p>
+        </div>
+      </a>
+
+      <!-- Clean Minimal Navigation (Strictly 3 High-Intent Links) -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
+        <a href="#admissions" class="hover:text-blue-700 flex items-center gap-1.5 transition">
+          <span>ভর্তি তথ্য</span>
+          <span class="px-1.5 py-0.5 rounded-full text-2xs font-bold bg-blue-100 text-blue-700">২০২৬</span>
+        </a>
+        <a href="#academics" class="hover:text-blue-700 transition">শ্রেণি কার্যক্রম ও ইংলিশ ক্লাব</a>
+        <a href="#notices" class="hover:text-blue-700 transition">নোটিশ বোর্ড</a>
+      </nav>
+
+      <!-- Single Primary Call Action -->
+      <div class="flex items-center gap-2">
+        <a href="tel:01713503854" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-700 hover:bg-blue-800 text-white text-sm font-bold shadow-xs transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <span>01713-503854</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Hero Section (Blue Theme) -->
+  <section id="hero" class="bg-gradient-to-b from-blue-50/70 to-slate-100 py-10 md:py-16 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left: Content -->
+        <div class="lg:col-span-6 space-y-5 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 border border-blue-200 text-blue-900 text-xs font-semibold">
+            <span>🏛️</span> গফরগাঁও পৌর শহরে ২য় বর্ষে পদার্পণ • প্লে থেকে ১০ম শ্রেণি
+          </div>
+
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+            গফরগাঁওয়ের প্রাণকেন্দ্রে <br>
+            <span class="text-blue-700">আদর্শ শিক্ষা ও আধুনিক ইংরেজি চর্চা</span>
+          </h2>
+
+          <p class="text-base md:text-lg text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+            ৪২৪, পশু হাসপাতাল রোড, গফরগাঁওয়ে বাংলা মাধ্যমের শক্তিশালী ভিত্তি ও <strong>English Language Club</strong> সমৃদ্ধ একটি আধুনিক শিক্ষাপ্রতিষ্ঠান।
+          </p>
+
+          <!-- Highlights Chips -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1 text-xs md:text-sm text-slate-700 font-medium">
+            <span class="bg-white border border-blue-400 text-blue-900 px-3 py-1.5 rounded-lg shadow-2xs font-semibold">
+              🎯 ভর্তি চলছে: প্লে থেকে ৮ম শ্রেণি
+            </span>
+            <span class="bg-white border border-blue-300 text-blue-700 px-3 py-1.5 rounded-lg shadow-2xs font-semibold">
+              🗣️ English Language Club
+            </span>
+            <span class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-2xs">
+              👨‍🏫 যত্নশীল শিক্ষক
+            </span>
+            <span class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-2xs">
+              🏫 মনোরম ক্যাম্পাস
+            </span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-3">
+            <a href="tel:01713503854" class="px-5 py-3 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-bold text-base shadow-md transition flex items-center gap-2">
+              <span>📞 সরাসরি কল করুন: 01713-503854</span>
+            </a>
+            <a href="https://wa.me/8801713503854" target="_blank" class="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base shadow-md transition flex items-center gap-2">
+              <span>💬 WhatsApp এ মেসেজ দিন</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Real Photo Slot for School Building -->
+        <div class="lg:col-span-6">
+          <div class="photo-placeholder rounded-2xl p-6 md:p-8 flex flex-col items-center justify-center text-center min-h-[340px] md:min-h-[400px] shadow-sm relative group">
+            <div class="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-3xl mb-3 text-blue-600">
+              📸
+            </div>
+            <span class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold mb-2">
+              মূল ছবি স্লট (Hero Photo)
+            </span>
+            <h3 class="font-bold text-slate-800 text-lg mb-1">
+              বিদ্যালয় ভবন ও প্রধান গেটের ছবি
+            </h3>
+            <p class="text-xs md:text-sm text-slate-500 max-w-sm">
+              স্কুলে গিয়ে সামনের গেট ও পুরো ভবনটি সুন্দরভাবে সকালের আলোতে তুলে এখানে বসানো হবে।
+            </p>
+            <div class="mt-4 px-3 py-1 bg-white/90 backdrop-blur rounded border border-blue-200 text-2xs text-slate-600 font-mono">
+              ক্যামেরা টিপস: আড়াআড়ি (Landscape 16:9) ফরম্যাটে তুলবেন
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Feature Spotlight: English Language Club (Blue & Amber Style) -->
+  <section class="py-10 bg-blue-950 text-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-8 space-y-2">
+          <span class="inline-block px-3 py-1 rounded-full bg-blue-800 text-amber-300 text-xs font-bold uppercase tracking-wider">
+            নতুন উদ্যোগ • Special Feature
+          </span>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-white">
+            Future Vision English Language Club
+          </h3>
+          <p class="text-blue-100 text-sm md:text-base leading-relaxed">
+            বাংলা মাধ্যমের পূর্ণাঙ্গ পাঠদানের পাশাপাশি গফরগাঁওয়ের শিক্ষার্থীদের ইংরেজি ভীতি দূর করতে আমরা শুরু করেছি <strong>English Language Club</strong>। এর মাধ্যমে ছাত্র-ছাত্রীরা আনন্দের সাথে ইংরেজিতে কথা বলা, ছড়া বলা, স্পষ্ট উচ্চারণ ও প্রাথমিক কথোপকথন শিখছে।
+          </p>
+        </div>
+        <div class="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-2.5 justify-center">
+          <div class="bg-blue-900/90 border border-blue-800 p-3 rounded-xl text-center">
+            <div class="text-xl mb-0.5">🗣️</div>
+            <div class="font-bold text-white text-sm">Spoken & Listening</div>
+            <div class="text-xs text-blue-200">মুখের জড়তা দূরীকরণ ও কথোপকথন</div>
+          </div>
+          <div class="bg-blue-900/90 border border-blue-800 p-3 rounded-xl text-center">
+            <div class="text-xl mb-0.5">📖</div>
+            <div class="font-bold text-white text-sm">Phonics & Reading</div>
+            <div class="text-xs text-blue-200">সঠিক উচ্চারণ ও বই পড়ার আনন্দ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Simple Reasons: Why Parents Choose This School -->
+  <section id="about" class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-2">কেন অভিভাবকরা আমাদের বেছে নেন?</h2>
+        <p class="text-sm md:text-base text-slate-600">গফরগাঁওয়ের অভিভাবকদের আস্থা ও শিক্ষার্থীদের সার্বিক বিকাশই আমাদের প্রধান লক্ষ্য।</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        
+        <!-- Card 1 -->
+        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-blue-400 hover:shadow-md transition">
+          <div class="text-3xl mb-3">👨‍🏫</div>
+          <h3 class="font-bold text-slate-900 text-base mb-1.5">স্নেহশীল ও অভিজ্ঞ শিক্ষক</h3>
+          <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
+            শাসন নয়, স্নেহের ছোঁয়ায় শিক্ষাদান। প্রতিটি শিশুর সমস্যা আলাদাভাবে বুঝে ক্লাসেই পড়া বুঝিয়ে দেওয়া হয়।
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-blue-400 hover:shadow-md transition">
+          <div class="text-3xl mb-3">📖</div>
+          <h3 class="font-bold text-slate-900 text-base mb-1.5">ইংরেজি ও গণিতে বিশেষ নজর</h3>
+          <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
+            ছোটবেলা থেকেই সহজ পদ্ধতিতে ইংরেজি বানান, রিডিং ও গণিতের হিসাব শেখানো হয় যেন ভিত মজবুত হয়।
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-blue-400 hover:shadow-md transition">
+          <div class="text-3xl mb-3">🏫</div>
+          <h3 class="font-bold text-slate-900 text-base mb-1.5">নিরাপদ ও সুশৃঙ্খল পরিবেশ</h3>
+          <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
+            পশু হাসপাতাল রোডের চমৎকার যোগাযোগব্যবস্থা। সার্বক্ষণিক তত্ত্বাবধান ও নিরাপদ ক্যাম্পাস।
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white hover:border-blue-400 hover:shadow-md transition">
+          <div class="text-3xl mb-3">🤲</div>
+          <h3 class="font-bold text-slate-900 text-base mb-1.5">নৈতিক চরিত্র ও শৃঙ্খলা</h3>
+          <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
+            বড়দের সম্মান করা, সহপাঠীদের সাহায্য করা এবং নিয়ম মেনে চলার সুঅভ্যাস গড়ে তোলা হয় প্রথম দিন থেকেই।
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Classes Running (প্লে থেকে ১০ম শ্রেণি — ভর্তি চলছে প্লে থেকে ৮ম) -->
+  <section id="academics" class="py-12 bg-slate-100 border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center max-w-xl mx-auto mb-8">
+        <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">শিক্ষা শাখা</span>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">আমাদের শ্রেণি কার্যক্রম</h2>
+        <p class="text-sm text-slate-600">প্লে থেকে ১০ম শ্রেণি পর্যন্ত পরিচালিত • বর্তমানে প্লে থেকে ৮ম শ্রেণিতে ভর্তি চলছে</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Pre-Primary -->
+        <div class="bg-white rounded-2xl p-6 border-2 border-blue-400 shadow-xs relative">
+          <div class="absolute -top-3 right-5 bg-blue-700 text-white text-2xs font-bold px-2.5 py-0.5 rounded-full">ভর্তি চলছে</div>
+          <div class="inline-block px-3 py-1 rounded-md bg-amber-100 text-amber-900 text-xs font-bold mb-3">প্রাক-প্রাথমিক</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">প্লে, নার্সারি ও কেজি</h3>
+          <p class="text-xs md:text-sm text-slate-600 mb-4">খেলার ছলে বর্ণমালা চেনা, ছবি আঁকা, ছড়া বলা ও আনন্দময় হাতেখড়ি।</p>
+          <ul class="text-xs text-slate-600 space-y-2">
+            <li class="flex items-center gap-2 text-slate-700 font-medium">✓ কোনো মানসিক চাপ ছাড়া শেখা</li>
+            <li class="flex items-center gap-2 text-slate-700 font-medium">✓ বর্ণমালার স্পষ্ট উচ্চারণ ও সুন্দর হাতের লেখা</li>
+            <li class="flex items-center gap-2 text-slate-700 font-medium">✓ প্রাথমিক ছড়া ও ইংরেজি শব্দ চর্চা</li>
+          </ul>
+        </div>
+
+        <!-- Primary -->
+        <div class="bg-white rounded-2xl p-6 border-2 border-blue-600 shadow-sm relative">
+          <div class="absolute -top-3 right-5 bg-blue-700 text-white text-2xs font-bold px-2.5 py-0.5 rounded-full">ভর্তি চলছে</div>
+          <div class="inline-block px-3 py-1 rounded-md bg-blue-100 text-blue-900 text-xs font-bold mb-3">প্রাথমিক শাখা</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">১ম থেকে ৫ম শ্রেণি</h3>
+          <p class="text-xs md:text-sm text-slate-600 mb-4">জাতীয় শিক্ষাক্রম (NCTB) অনুযায়ী পূর্ণাঙ্গ পাঠদান এবং নিয়মিত পরীক্ষা ও মূল্যায়ন।</p>
+          <ul class="text-xs text-slate-600 space-y-2">
+            <li class="flex items-center gap-2 text-slate-700 font-medium">✓ গণিত ও বিজ্ঞানের ভিত মজবুতকরণ</li>
+            <li class="flex items-center gap-2 text-slate-700 font-medium">✓ English Language Club এর বিশেষ সুবিধা</li>
+            <li class="flex items-center gap-2 text-slate-700 font-medium">✓ প্রাথমিক বৃত্তি পরীক্ষার প্রস্তুতি</li>
+          </ul>
+        </div>
+
+        <!-- Middle & Secondary -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs">
+          <div class="inline-block px-3 py-1 rounded-md bg-slate-100 text-slate-900 text-xs font-bold mb-3">মাধ্যমিক স্তর</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">৬ষ্ঠ থেকে ১০ম শ্রেণি</h3>
+          <p class="text-xs md:text-sm text-slate-600 mb-4">৬ষ্ঠ থেকে ৮ম শ্রেণিতে নতুন ভর্তি চলছে। ৯ম ও ১০ম শ্রেণিতে এসএসসি প্রস্তুতিমূলক ক্লাস চলছে।</p>
+          <ul class="text-xs text-slate-600 space-y-2">
+            <li class="flex items-center gap-2 text-slate-700 font-medium">✓ অভিজ্ঞ বিষয়ভিত্তিক শিক্ষকবৃন্দ</li>
+            <li class="flex items-center gap-2 text-slate-700 font-medium">✓ নিয়মিত সাপ্তাহিক ও মাসিক পরীক্ষা</li>
+            <li class="flex items-center gap-2 text-slate-700 font-medium">✓ এসএসসি পরীক্ষায় ভালো ফলাফলের বিশেষ প্রস্তুতি</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Section: Real School Moments (Prepared for your upcoming photos) -->
+  <section id="photos" class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-3">
+        <div>
+          <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">ক্যাম্পাস মুহূর্ত</span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">আমাদের স্কুলের বাস্তব চিত্র</h2>
+          <p class="text-sm text-slate-600 mt-1">স্কুলে গিয়ে আপনার তোলা ছবিগুলো ঠিক এই স্লটগুলোতে বসবে</p>
+        </div>
+        <div class="text-xs text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
+          📷 ছবি তোলার প্রস্তুতি গাইড অন্তর্ভুক্ত
+        </div>
+      </div>
+
+      <!-- 6 Photo Slots Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        
+        <!-- Photo Slot 1 -->
+        <div class="photo-placeholder rounded-xl p-5 flex flex-col items-center justify-center text-center aspect-4/3">
+          <div class="text-2xl mb-2">🏫</div>
+          <span class="font-bold text-slate-800 text-sm mb-1">ছবি ১: প্রধান ফটক ও নামফলক</span>
+          <p class="text-xs text-slate-500 max-w-xs">স্কুলের প্রধান গেট, সাইনবোর্ড এবং সামনের সুন্দর দৃশ্য</p>
+        </div>
+
+        <!-- Photo Slot 2 -->
+        <div class="photo-placeholder rounded-xl p-5 flex flex-col items-center justify-center text-center aspect-4/3">
+          <div class="text-2xl mb-2">📖</div>
+          <span class="font-bold text-slate-800 text-sm mb-1">ছবি ২: ক্লাসরুমে পাঠদান</span>
+          <p class="text-xs text-slate-500 max-w-xs">শিক্ষক বোর্ডে লিখছেন বা শিক্ষার্থীদের পড়া বুঝিয়ে দিচ্ছেন</p>
+        </div>
+
+        <!-- Photo Slot 3 -->
+        <div class="photo-placeholder rounded-xl p-5 flex flex-col items-center justify-center text-center aspect-4/3">
+          <div class="text-2xl mb-2">🗣️</div>
+          <span class="font-bold text-slate-800 text-sm mb-1">ছবি ৩: English Language Club</span>
+          <p class="text-xs text-slate-500 max-w-xs">শিক্ষার্থীরা দলগতভাবে ইংরেজিতে কথা বলা বা পড়ার চর্চা করছে</p>
+        </div>
+
+        <!-- Photo Slot 4 -->
+        <div class="photo-placeholder rounded-xl p-5 flex flex-col items-center justify-center text-center aspect-4/3">
+          <div class="text-2xl mb-2">🏃‍♂️</div>
+          <span class="font-bold text-slate-800 text-sm mb-1">ছবি ৪: সকালের সমাবেশ ও পিটি</span>
+          <p class="text-xs text-slate-500 max-w-xs">সারিবদ্ধ হয়ে জাতীয় সঙ্গীত ও শারীরিক কসরতের দৃশ্য</p>
+        </div>
+
+        <!-- Photo Slot 5 -->
+        <div class="photo-placeholder rounded-xl p-5 flex flex-col items-center justify-center text-center aspect-4/3">
+          <div class="text-2xl mb-2">⚽</div>
+          <span class="font-bold text-slate-800 text-sm mb-1">ছবি ৫: খেলাধুলা ও সহশিক্ষা</span>
+          <p class="text-xs text-slate-500 max-w-xs">টিফিনের সময় আনন্দমুখর পরিবেশ বা খেলাধুলা</p>
+        </div>
+
+        <!-- Photo Slot 6 -->
+        <div class="photo-placeholder rounded-xl p-5 flex flex-col items-center justify-center text-center aspect-4/3">
+          <div class="text-2xl mb-2">🏆</div>
+          <span class="font-bold text-slate-800 text-sm mb-1">ছবি ৬: শিক্ষক ও শিক্ষার্থীদের দলগত ছবি</span>
+          <p class="text-xs text-slate-500 max-w-xs">পুরস্কার বিতরণী বা সুন্দর কোনো আনন্দঘন মুহূর্ত</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Admissions Information (ভর্তি তথ্য - সহজ ৩ ধাপ) -->
+  <section id="admissions" class="py-12 bg-blue-50/80 border-t border-blue-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <span class="inline-block px-3 py-1 rounded-full bg-blue-700 text-white text-xs font-bold mb-2">নতুন শিক্ষাবর্ষে ভর্তি চলছে</span>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">প্লে থেকে ৮ম শ্রেণিতে ভর্তি প্রক্রিয়া</h2>
+        <p class="text-sm text-slate-600 mt-1">খুব সহজ ৩টি ধাপে আপনার সন্তানের ভর্তি সম্পন্ন করুন</p>
+      </div>
+
+      <!-- 3 Steps -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        
+        <div class="bg-white p-5 rounded-xl border border-blue-200 shadow-2xs">
+          <div class="w-8 h-8 rounded-full bg-blue-700 text-white font-bold flex items-center justify-center text-sm mb-3">১</div>
+          <h4 class="font-bold text-slate-900 text-base mb-1">ফরম সংগ্রহ</h4>
+          <p class="text-xs text-slate-600">স্কুল অফিস থেকে সরাসরি ভর্তি ফরম সংগ্রহ করুন অথবা ফোন করুন।</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-blue-200 shadow-2xs">
+          <div class="w-8 h-8 rounded-full bg-blue-700 text-white font-bold flex items-center justify-center text-sm mb-3">২</div>
+          <h4 class="font-bold text-slate-900 text-base mb-1">সহজ মূল্যায়ন</h4>
+          <p class="text-xs text-slate-600">শিক্ষার্থীর সাথে বন্ধুত্বপূর্ণ পরিচিতি ও শ্রেণি নির্ধারণ।</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-blue-200 shadow-2xs">
+          <div class="w-8 h-8 rounded-full bg-blue-700 text-white font-bold flex items-center justify-center text-sm mb-3">৩</div>
+          <h4 class="font-bold text-slate-900 text-base mb-1">ভর্তি নিশ্চিত</h4>
+          <p class="text-xs text-slate-600">নির্ধারিত ফি পরিশোধ করে রসিদ ও বই-খাতার তালিকা গ্রহণ করুন।</p>
+        </div>
+
+      </div>
+
+      <!-- Required Papers & Direct Phone Box -->
+      <div class="bg-white rounded-2xl p-6 border border-blue-200 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <h4 class="font-bold text-slate-900 text-base mb-1">ভর্তির জন্য প্রয়োজনীয় কাগজপত্র:</h4>
+          <ul class="text-xs md:text-sm text-slate-600 space-y-1">
+            <li>• শিক্ষার্থীর ডিজিটাল জন্ম নিবন্ধন সনদের ফটোকপি</li>
+            <li>• শিক্ষার্থীর ২ কপি পাসপোর্ট সাইজ ছবি</li>
+            <li>• পিতা ও মাতার জাতীয় পরিচয়পত্রের ফটোকপি</li>
+            <li>• পূর্ববর্তী স্কুলের ছাড়পত্র / প্রশংসাপত্র (২য় থেকে ৮ম শ্রেণির জন্য)</li>
+          </ul>
+        </div>
+
+        <div class="text-center md:text-right shrink-0">
+          <p class="text-xs text-slate-500 mb-1">ভর্তির বিস্তারিত জানতে কল বা WhatsApp করুন</p>
+          <a href="tel:01713503854" class="inline-block px-5 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-bold text-base shadow-sm transition">
+            📞 01713-503854
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- News & Notice Board Section (নোটিশ ও সাম্প্রতিক খবর) -->
+  <section id="notices" class="py-12 bg-slate-100 border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-3">
+        <div>
+          <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">ঘোষণা ও আপডেট</span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">নোটিশ ও সাম্প্রতিক খবর (Notice Board)</h2>
+          <p class="text-sm text-slate-600 mt-1">বিদ্যালয়ের যাবতীয় জরুরি নোটিশ ও শিক্ষা সংক্রান্ত ঘোষণা</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-700">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            লাইভ নোটিশ বোর্ড
+          </span>
+        </div>
+      </div>
+
+      <!-- Notice Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+        <!-- Notice 1: Admissions -->
+        <div class="bg-white rounded-2xl p-6 border-2 border-blue-500 shadow-sm flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-blue-600 text-white text-2xs font-bold px-3 py-1 rounded-bl-lg">
+            ভর্তি সংক্রান্ত
+          </div>
+          <div>
+            <div class="flex items-center gap-2 text-xs text-slate-500 mb-2 font-mono">
+              <span>📅 অক্টোবর ২০২৬</span>
+              <span>•</span>
+              <span class="text-blue-700 font-bold">জরুরি নোটিশ</span>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base mb-2 leading-snug">
+              নতুন শিক্ষাবর্ষে প্লে থেকে ৮ম শ্রেণিতে ভর্তি বিজ্ঞপ্তি
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              আগামী শিক্ষাবর্ষের জন্য ভর্তি ফরম বিতরণ শুরু হয়েছে। প্রতিটি শ্রেণিতে আসন সংখ্যা সীমিত থাকায় দ্রুত ফরম সংগ্রহ ও জমা দেওয়ার জন্য অনুরোধ করা যাচ্ছে।
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+            <span class="font-semibold text-emerald-700">ফরম বিতরণ চলমান</span>
+            <a href="tel:01713503854" class="text-blue-700 hover:underline font-bold flex items-center gap-1">
+              বিস্তারিত জানুন →
+            </a>
+          </div>
+        </div>
+
+        <!-- Notice 2: English Language Club -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 text-xs text-slate-500 mb-2 font-mono">
+              <span>📅 সাম্প্রতিক</span>
+              <span>•</span>
+              <span class="text-blue-700 font-bold">সহশিক্ষা</span>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base mb-2 leading-snug">
+              Future Vision English Language Club ক্লাসের সূচনা
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              শিক্ষার্থীদের স্পোকেন ইংলিশের জড়তা দূর ও আত্মবিশ্বাস বাড়াতে সাপ্তাহিক বিশেষ ক্লাব সেশন শুরু হতে যাচ্ছে। সকল শিক্ষার্থী এতে অংশগ্রহণ করতে পারবে।
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+            <span class="font-semibold text-blue-800">নিয়মিত কার্যক্রম</span>
+            <a href="#academics" class="text-blue-700 hover:underline font-bold flex items-center gap-1">
+              ক্লাব বিবরণী →
+            </a>
+          </div>
+        </div>
+
+        <!-- Notice 3: Academic Calendar & Routine -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 text-xs text-slate-500 mb-2 font-mono">
+              <span>📅 বার্ষিক</span>
+              <span>•</span>
+              <span class="text-amber-700 font-bold">একাডেমিক</span>
+            </div>
+            <h3 class="font-bold text-slate-900 text-base mb-2 leading-snug">
+              বার্ষিক একাডেমিক ক্যালেন্ডার ও অফিস সময়সূচি
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              শনিবার থেকে বৃহস্পতিবার সকাল ৮:০০টা থেকে দুপুর ২:০০টা পর্যন্ত প্রশাসনিক কার্যক্রম ও অভিভাবক পরামর্শ সেবা চালু থাকবে।
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+            <span class="font-semibold text-slate-600">অফিস নোটিশ</span>
+            <a href="#contact" class="text-blue-700 hover:underline font-bold flex items-center gap-1">
+              সময়সূচি দেখুন →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Contact (যোগাযোগ ও ঠিকানা) -->
+  <section id="contact" class="py-12 bg-white border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        
+        <!-- Address Details -->
+        <div class="space-y-4">
+          <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">সরাসরি দেখা করুন</span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">আমাদের ঠিকানা ও যোগাযোগের মাধ্যম</h2>
+          
+          <div class="space-y-3 text-sm text-slate-700 pt-2">
+            <div class="flex items-start gap-3">
+              <span class="text-xl">📍</span>
+              <div>
+                <strong class="text-slate-900">স্কুলের ঠিকানা:</strong>
+                <p>৪২৪, পশু হাসপাতাল রোড, গফরগাঁও, ময়মনসিংহ, বাংলাদেশ</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-xl">📞</span>
+              <div>
+                <strong class="text-slate-900">মোবাইল ফোন ও WhatsApp:</strong>
+                <p class="font-bold text-blue-700 text-base">01713-503854</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-xl">🌐</span>
+              <div>
+                <strong class="text-slate-900">অফিসিয়াল ফেসবুক পেজ:</strong>
+                <p>
+                  <a href="https://www.facebook.com/profile.php?id=61595188603461" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium">
+                    facebook.com/profile.php?id=61595188603461
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-xl">⏰</span>
+              <div>
+                <strong class="text-slate-900">অফিস খোলা থাকে:</strong>
+                <p>শনিবার থেকে বৃহস্পতিবার: সকাল ৮:০০টা – দুপুর ২:০০টা</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Buttons -->
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="tel:01713503854" class="px-5 py-2.5 rounded-lg bg-blue-700 hover:bg-blue-800 text-white text-sm font-semibold shadow-sm transition flex items-center gap-1.5">
+              <span>📞 সরাসরি কল দিন</span>
+            </a>
+            <a href="https://wa.me/8801713503854" target="_blank" class="px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold shadow-sm transition flex items-center gap-1.5">
+              <span>💬 WhatsApp এ মেসেজ দিন</span>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61595188603461" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-semibold transition">
+              ফেসবুক পেজ
+            </a>
+          </div>
+        </div>
+
+        <!-- Location Map Card -->
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center space-y-3">
+          <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-700 text-2xl flex items-center justify-center mx-auto">
+            🗺️
+          </div>
+          <h3 class="font-bold text-slate-900 text-base">কীভাবে আসবেন?</h3>
+          <p class="text-xs md:text-sm text-slate-600 max-w-sm mx-auto">
+            গফরগাঁও রেলওয়ে স্টেশন বা বাজার থেকে রিকশা/অটোরিকশায় সরাসরি <strong>পশু হাসপাতাল রোডের ৪২৪ নম্বর ভবনে</strong> চলে আসুন।
+          </p>
+          <div class="pt-3 flex flex-col gap-2.5 items-center">
+            <span class="inline-block px-3 py-1 bg-white border border-slate-300 rounded-lg text-xs font-semibold text-slate-700">
+              📍 ল্যান্ডমার্ক: পশু হাসপাতালের নিকটবর্তী, ৪২৪ নম্বর ভবন
+            </span>
+            <a 
+              href="https://www.google.com/maps/place/Future+Vision+Academy/@24.4512248,90.5512077,18z/data=!4m6!3m5!1s0x3756610033613fb3:0xdf861c3aebdb9a0f!8m2!3d24.4512248!4d90.5512077!16s%2Fg%2F11zyj_5q4_" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-blue-700 hover:bg-blue-800 text-white text-xs font-bold shadow-xs transition"
+            >
+              <span>🗺️ গুগল ম্যাপে সরাসরি দেখুন (Open Google Maps)</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean, Simple Footer (Navy / Blue) -->
+  <footer class="bg-slate-900 text-slate-300 py-8 mt-auto border-t border-slate-800 text-xs">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+      <div>
+        <p class="font-bold text-sm text-white">ফিউচার ভিশন একাডেমি (Future Vision Academy)</p>
+        <p class="text-slate-400 mt-0.5">৪২৪, পশু হাসপাতাল রোড, গফরগাঁও, ময়মনসিংহ</p>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-4 text-slate-400">
+        <a href="tel:01713503854" class="hover:text-white">📞 01713-503854</a>
+        <span>•</span>
+        <a href="https://www.facebook.com/profile.php?id=61595188603461" target="_blank" rel="noopener noreferrer" class="hover:text-white">Facebook Page</a>
+        <span>•</span>
+        <p>© 2026 Future Vision Academy. সর্বস্বত্ব সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

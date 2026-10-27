@@ -1,0 +1,689 @@
+/* ==========================================================================
+   Future Vision Academy — Landing Page Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Hero Section
+   -------------------------------------------------------------------------- */
+.landing-hero {
+  background: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%);
+  border-bottom: 1px solid var(--color-gray-200);
+  padding-block: clamp(2.5rem, 5vw, 4.5rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.landing-hero__grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.landing-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-100);
+  border: 1px solid var(--color-primary-200);
+  color: var(--color-primary-900);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.landing-hero__title {
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.02em;
+}
+
+.landing-hero__title-highlight {
+  color: var(--color-primary-700);
+  display: inline-block;
+  position: relative;
+}
+
+.landing-hero__desc {
+  font-size: clamp(1rem, 1.25vw, 1.125rem);
+  line-height: 1.65;
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-lg);
+  max-width: 580px;
+}
+
+.landing-hero__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-xl);
+}
+
+.landing-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-gray-700);
+  box-shadow: var(--shadow-subtle);
+}
+
+.landing-chip--primary {
+  border-color: var(--color-primary-500);
+  color: var(--color-primary-800);
+  background: #f0f7ff;
+}
+
+.landing-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.btn-cta-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-700);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.btn-cta-call:hover {
+  background: var(--color-primary-800);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(29, 78, 216, 0.35);
+  color: var(--color-white);
+}
+
+.btn-cta-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: var(--radius-md);
+  background: #10b981;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.btn-cta-whatsapp:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
+  color: var(--color-white);
+}
+
+/* Hero Visual Showcase */
+.landing-hero__showcase {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.landing-hero__logo-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-gray-100);
+  margin-bottom: var(--space-md);
+}
+
+.landing-hero__logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  background: #f8fafc;
+  border: 1px solid var(--color-gray-200);
+  padding: 4px;
+}
+
+.landing-hero__photo-slot {
+  background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 50%, #f8fafc 100%);
+  border: 2px dashed #93c5fd;
+  border-radius: var(--radius-md);
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.landing-hero__photo-slot:hover {
+  border-color: var(--color-primary-600);
+  background: #eff6ff;
+}
+
+.landing-hero__stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-gray-100);
+  text-align: center;
+}
+
+.landing-stat-val {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--color-primary-700);
+}
+
+.landing-stat-lbl {
+  font-size: 0.725rem;
+  color: var(--color-gray-500);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   English Language Club Spotlight (Dark Navy Theme)
+   -------------------------------------------------------------------------- */
+.landing-spotlight {
+  background: #0f172a;
+  color: var(--color-white);
+  padding-block: clamp(2.5rem, 4vw, 3.5rem);
+  border-top: 1px solid #1e293b;
+  border-bottom: 1px solid #1e293b;
+}
+
+.landing-spotlight__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.landing-spotlight__pill {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #1e3a8a;
+  color: #fbbf24;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+}
+
+.landing-spotlight__title {
+  color: var(--color-white);
+  font-size: clamp(1.5rem, 2.5vw, 2.125rem);
+  font-weight: 800;
+  margin-bottom: var(--space-sm);
+}
+
+.landing-spotlight__desc {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.landing-spotlight__cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.landing-spotlight__card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  transition: all var(--transition-fast);
+}
+
+.landing-spotlight__card:hover {
+  border-color: #3b82f6;
+  background: #253349;
+}
+
+.landing-spotlight__card-title {
+  font-weight: 700;
+  font-size: 0.925rem;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.landing-spotlight__card-sub {
+  font-size: 0.775rem;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Why Parents Choose Us (4 Cards)
+   -------------------------------------------------------------------------- */
+.landing-section-header {
+  text-align: center;
+  max-width: 680px;
+  margin-inline: auto;
+  margin-bottom: var(--space-2xl);
+}
+
+.landing-section-tag {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-primary-700);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.landing-section-title {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-xs);
+}
+
+.landing-section-desc {
+  font-size: 0.95rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+.landing-feature-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-normal);
+}
+
+.landing-feature-card:hover {
+  border-color: var(--color-primary-400);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.landing-feature-card__icon {
+  font-size: 1.85rem;
+  margin-bottom: var(--space-sm);
+  display: inline-block;
+}
+
+.landing-feature-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-xs);
+}
+
+.landing-feature-card__desc {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Academic Classes / Stages (3 Columns)
+   -------------------------------------------------------------------------- */
+.landing-class-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  border: 1px solid var(--color-gray-200);
+  box-shadow: var(--shadow-subtle);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.landing-class-card--featured {
+  border: 2px solid var(--color-primary-600);
+  box-shadow: var(--shadow-md);
+}
+
+.landing-class-card__badge-top {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--color-primary-700);
+  color: var(--color-white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.landing-class-card__stage-pill {
+  display: inline-block;
+  font-size: 0.775rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  margin-bottom: var(--space-sm);
+  width: fit-content;
+}
+
+.landing-stage-amber {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.landing-stage-blue {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.landing-stage-gray {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.landing-class-card__title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-xs);
+}
+
+.landing-class-card__desc {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.landing-class-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: auto;
+}
+
+.landing-class-card__item {
+  font-size: 0.8125rem;
+  color: var(--color-gray-700);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.landing-class-card__item-check {
+  color: var(--color-primary-600);
+  font-weight: 800;
+}
+
+/* --------------------------------------------------------------------------
+   Photos / Campus Real Moments
+   -------------------------------------------------------------------------- */
+.landing-photo-slot {
+  background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+  border: 1.5px dashed #93c5fd;
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  aspect-ratio: 4 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.landing-photo-slot:hover {
+  border-color: var(--color-primary-600);
+  background: #eff6ff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.landing-photo-slot__icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-xs);
+}
+
+.landing-photo-slot__title {
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: 4px;
+}
+
+.landing-photo-slot__desc {
+  font-size: 0.775rem;
+  color: var(--color-gray-500);
+  max-width: 240px;
+}
+
+/* --------------------------------------------------------------------------
+   Admissions 3-Step Hub
+   -------------------------------------------------------------------------- */
+.landing-admissions-step {
+  background: var(--color-white);
+  border: 1px solid #bfdbfe;
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-step-num {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-primary-700);
+  color: var(--color-white);
+  font-weight: 800;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+}
+
+.landing-step-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2xs);
+}
+
+.landing-step-desc {
+  font-size: 0.8125rem;
+  color: var(--color-gray-600);
+  line-height: 1.55;
+}
+
+.landing-papers-card {
+  background: var(--color-white);
+  border: 1px solid #bfdbfe;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-top: var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  box-shadow: var(--shadow-subtle);
+}
+
+.landing-papers-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-xs) 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: var(--color-gray-700);
+}
+
+/* --------------------------------------------------------------------------
+   Notice Board Cards
+   -------------------------------------------------------------------------- */
+.landing-notice-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.landing-notice-card--urgent {
+  border: 2px solid var(--color-primary-500);
+  box-shadow: var(--shadow-sm);
+}
+
+.landing-notice-card__badge-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--color-primary-600);
+  color: var(--color-white);
+  font-size: 0.675rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-bottom-left-radius: var(--radius-sm);
+}
+
+.landing-notice-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+  font-family: monospace;
+  margin-bottom: var(--space-xs);
+}
+
+.landing-notice-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  line-height: 1.4;
+  margin-bottom: var(--space-xs);
+}
+
+.landing-notice-desc {
+  font-size: 0.8125rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.landing-notice-footer {
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+}
+
+/* --------------------------------------------------------------------------
+   Contact & Location Grid
+   -------------------------------------------------------------------------- */
+.landing-contact-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.landing-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.landing-contact-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.landing-map-box {
+  background: var(--color-gray-50);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .landing-hero__grid,
+  .landing-spotlight__grid,
+  .landing-contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .landing-hero__showcase {
+    order: 2;
+  }
+
+  .landing-papers-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .landing-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-cta-call,
+  .btn-cta-whatsapp {
+    justify-content: center;
+  }
+}
