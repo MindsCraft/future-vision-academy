@@ -32,9 +32,6 @@ def assemble_html():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Future Vision Academy — Elite Figma-Grade UX Specification Workbench (Always Light Mode)</title>
-  <!-- Tailwind CSS via allowlisted gstatic dependency -->
-  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   {STYLES}
 </head>
 <body class="studio-canvas text-slate-900 antialiased min-h-screen selection:bg-blue-600 selection:text-white">
