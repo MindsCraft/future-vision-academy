@@ -33,3 +33,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# internal documentation, research & tooling (managed in private repo)
+/docs/
+/scripts/
+__pycache__/
+*.pyc
+WIREFRAME_SPECS.md
+wireframe.html
+/public/wireframe.html
+/public/images/logo 1.png
+/public/logo.png
+
