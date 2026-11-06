@@ -1,23 +1,15 @@
 import type { Metadata } from 'next';
-import { Hind_Siliguri, Inter } from 'next/font/google';
+import { Noto_Sans_Bengali } from 'next/font/google';
 import '@/styles/globals.css';
 import { siteConfig } from '@/config/site';
 import { AnnouncementBanner } from '@/components/layout/AnnouncementBanner/AnnouncementBanner';
 import { Navbar } from '@/components/layout/Navbar/Navbar';
 import { Footer } from '@/components/layout/Footer/Footer';
 
-const hindSiliguri = Hind_Siliguri({
-  subsets: ['bengali', 'latin'],
-  variable: '--font-hind-siliguri',
+const notoSansBengali = Noto_Sans_Bengali({
+  subsets: ['bengali'],
+  variable: '--font-noto-sans-bengali',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
-});
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -35,8 +27,15 @@ export const metadata: Metadata = {
     'ভর্তি চলছে',
   ],
   icons: {
-    icon: '/images/logo.png',
-    apple: '/images/logo.png',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/logo-icon.png', sizes: '208x208', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
   },
 };
 
@@ -46,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="bn" className={`${hindSiliguri.variable} ${inter.variable}`}>
+    <html lang="bn" className={notoSansBengali.variable}>
       <body>
         <AnnouncementBanner />
         <Navbar />
