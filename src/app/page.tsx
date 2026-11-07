@@ -11,8 +11,9 @@ import {
   Languages,
   ShieldCheck,
   BookOpen,
+  Navigation,
 } from 'lucide-react';
-import { siteConfig } from '@/config/site';
+import { siteConfig, googleMapsConfig } from '@/config/site';
 
 export const metadata: Metadata = {
   title: `ভর্তি চলছে ২০২৬ — ${siteConfig.shortName} | ${siteConfig.name}`,
@@ -22,7 +23,9 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const phoneNumber = siteConfig.contact.phone || '01713-503854';
   const rawPhone = phoneNumber.replace(/[^0-9]/g, '');
-  const whatsappUrl = `https://wa.me/88${rawPhone}`;
+  const whatsappUrl = `https://wa.me/88${rawPhone}?text=${encodeURIComponent(
+    'আসসালামু আলাইকুম, ফিউচার ভিশন একাডেমিতে নতুন শিক্ষাবর্ষে ভর্তি সম্পর্কিত তথ্য জানতে চাই।'
+  )}`;
 
   return (
     <div className="admission-wrapper">
@@ -33,7 +36,7 @@ export default function HomePage() {
             <span className="admission-poster__pulse-dot" />
             <span>ভর্তি চলছে ২০২৬</span>
           </div>
-          <div>প্লে থেকে ১০ম শ্রেণি • আসন সংখ্যা সীমিত</div>
+          <div>প্লে, নার্সারি, কেজি থেকে ১০ম শ্রেণি • সীমিত আসন</div>
           <div>স্থাপিত: ২০২৫ • গফরগাঁও, ময়মনসিংহ</div>
         </div>
 
@@ -46,8 +49,8 @@ export default function HomePage() {
                 <Image
                   src="/images/logo-icon.png"
                   alt={`${siteConfig.name} লোগো`}
-                  width={96}
-                  height={96}
+                  width={100}
+                  height={100}
                   className="admission-poster__logo-img"
                   priority
                 />
@@ -75,7 +78,7 @@ export default function HomePage() {
               প্লে থেকে ৮ম শ্রেণিতে নতুন শিক্ষার্থী ভর্তি কার্যক্রম শুরু হয়েছে
             </h2>
             <p className="admission-poster__subtext">
-              গফরগাঁও পৌর শহরের পশু হাসপাতাল রোডে মনোরম ও নিরাপদ পরিবেশে আপনার সন্তানের ভবিষ্যৎ গড়ার আধুনিক বিদ্যাপীঠ।
+              গফরগাঁও পৌর শহরের পশু হাসপাতাল রোডে মনোরম ও সম্পূর্ণ সিসিটিভি নিয়ন্ত্রিত নিরাপদ পরিবেশে আপনার সন্তানের ভবিষ্যৎ গড়ার নির্ভরযোগ্য বিদ্যাপীঠ।
             </p>
           </section>
 
@@ -83,48 +86,48 @@ export default function HomePage() {
           <section className="admission-poster__features">
             <div className="admission-poster__feature-card">
               <div className="admission-poster__feature-icon">
-                <GraduationCap size={22} />
+                <GraduationCap size={24} />
               </div>
               <div>
                 <h3 className="admission-poster__feature-title">শ্রেণি কার্যক্রম</h3>
                 <p className="admission-poster__feature-desc">
-                  প্লে থেকে ১০ম শ্রেণি পর্যন্ত পাঠদান। বর্তমানে প্লে থেকে ৮ম শ্রেণিতে সরাসরি ভর্তি চলছে।
+                  প্লে থেকে ১০ম শ্রেণি পর্যন্ত আদর্শ পাঠদান। বর্তমানে প্লে থেকে ৮ম শ্রেণিতে সরাসরি ভর্তি চলছে।
                 </p>
               </div>
             </div>
 
             <div className="admission-poster__feature-card">
               <div className="admission-poster__feature-icon">
-                <Languages size={22} />
+                <Languages size={24} />
               </div>
               <div>
                 <h3 className="admission-poster__feature-title">English Language Club</h3>
                 <p className="admission-poster__feature-desc">
-                  বাংলা মাধ্যমের পাশাপাশি শিশুদের জন্য বিশেষ স্পোকেন ও নিয়মিত ইংরেজি চর্চার সুযোগ।
+                  বাংলা মাধ্যমের পাশাপাশি শিশুদের ফ্লুয়েন্ট স্পোকেন ও আধুনিক ইংরেজি চর্চার বিশেষ ব্যবস্থা।
                 </p>
               </div>
             </div>
 
             <div className="admission-poster__feature-card">
               <div className="admission-poster__feature-icon">
-                <ShieldCheck size={22} />
+                <ShieldCheck size={24} />
               </div>
               <div>
-                <h3 className="admission-poster__feature-title">নিরাপদ ও সুশৃঙ্খল পরিবেশ</h3>
+                <h3 className="admission-poster__feature-title">সিসিটিভি ও নিরাপদ পরিবেশ</h3>
                 <p className="admission-poster__feature-desc">
-                  সম্পূর্ণ ক্যাম্পাস সার্বক্ষণিক সিসিটিভি ক্যামেরা নিয়ন্ত্রিত ও মনোরম পরিবেশ।
+                  সম্পূর্ণ ক্যাম্পাস সার্বক্ষণিক সিসিটিভি ক্যামেরা নিয়ন্ত্রিত, সুশৃঙ্খল ও আন্তরিক নজরদারি।
                 </p>
               </div>
             </div>
 
             <div className="admission-poster__feature-card">
               <div className="admission-poster__feature-icon">
-                <BookOpen size={22} />
+                <BookOpen size={24} />
               </div>
               <div>
-                <h3 className="admission-poster__feature-title">যত্নশীল পাঠদান</h3>
+                <h3 className="admission-poster__feature-title">যত্নশীল শিক্ষক মণ্ডলী</h3>
                 <p className="admission-poster__feature-desc">
-                  অভিজ্ঞ শিক্ষক-শিক্ষিকা কর্তৃক আন্তরিক পাঠদান, নিয়মিত ক্লাস টেস্ট ও ফলাফল পর্যালোচনা।
+                  দক্ষ ও অভিজ্ঞ শিক্ষক-শিক্ষিকা কর্তৃক সহজবোধ্য পাঠদান, নিয়মিত ক্লাস টেস্ট ও সাপ্তাহিক মূল্যায়ন।
                 </p>
               </div>
             </div>
@@ -144,7 +147,17 @@ export default function HomePage() {
               className="admission-btn-whatsapp"
             >
               <MessageCircle size={20} />
-              <span>হোয়াটসঅ্যাপে যোগাযোগ</span>
+              <span>হোয়াটসঅ্যাপে মেসেজ পাঠান</span>
+            </a>
+
+            <a
+              href={googleMapsConfig.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="admission-btn-map"
+            >
+              <Navigation size={18} />
+              <span>ম্যাপে লোকেশন দেখুন</span>
             </a>
           </div>
         </div>

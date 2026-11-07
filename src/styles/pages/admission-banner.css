@@ -1,6 +1,10 @@
 /* ==========================================================================
-   Admission Going On — Hero Banner / Poster Page
-   Future Vision Academy (ফিউচার ভিশন একাডেমি)
+   Future Vision Academy — Bespoke Admission Hero Banner
+   Official Brand Color Palette:
+   - Royal Navy / Indigo: #2d2d85 (#1e2677, #18184c)
+   - Electric Cyan / Azure: #007cc1 (#0096c7)
+   - Radiant Gold / Yellow: #fef200 (#f59e0b)
+   - Crisp White & Light Slate: #ffffff, #f8fafc
    ========================================================================== */
 
 .admission-wrapper {
@@ -8,104 +12,109 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at 50% 20%, #1e3a8a 0%, #0f172a 65%, #020617 100%);
-  padding: var(--space-xl) var(--space-md);
+  background: radial-gradient(circle at 50% 15%, #242475 0%, #17174e 45%, #0d0d2b 100%);
+  padding: clamp(1rem, 3vw, 2.5rem) var(--space-md);
   position: relative;
   overflow: hidden;
 }
 
-/* Subtle background accent glow */
+/* Atmospheric brand glow */
 .admission-wrapper::before {
   content: '';
   position: absolute;
-  top: 10%;
+  top: -100px;
   left: 50%;
   transform: translateX(-50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, rgba(15, 23, 42, 0) 70%);
+  width: clamp(350px, 60vw, 750px);
+  height: clamp(350px, 60vw, 750px);
+  background: radial-gradient(circle, rgba(0, 124, 193, 0.22) 0%, rgba(45, 45, 133, 0.05) 60%, transparent 75%);
   border-radius: 50%;
   pointer-events: none;
 }
 
 .admission-poster {
   width: 100%;
-  max-width: 900px;
-  background: rgba(255, 255, 255, 0.98);
+  max-width: 920px;
+  background: rgba(255, 255, 255, 0.99);
   border-radius: var(--radius-xl);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 50px -12px rgba(10, 10, 35, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.25);
   overflow: hidden;
   position: relative;
   z-index: 1;
 }
 
-/* Poster Top Accent Strip */
+/* Top Notification Strip */
 .admission-poster__top-strip {
-  background: linear-gradient(90deg, #1e3a8a 0%, #2563eb 50%, #d97706 100%);
+  background: linear-gradient(90deg, #2d2d85 0%, #007cc1 60%, #1e2677 100%);
   padding: 10px var(--space-lg);
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.8125rem;
+  font-size: 0.825rem;
   font-weight: 700;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   flex-wrap: wrap;
   gap: 8px;
+  border-bottom: 2px solid #fef200;
 }
 
 .admission-poster__pill {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 2px 10px;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 3px 12px;
   border-radius: var(--radius-pill);
+  font-weight: 700;
+  color: #fef200;
+  border: 1px solid rgba(254, 242, 0, 0.4);
 }
 
 .admission-poster__pulse-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #f59e0b;
-  box-shadow: 0 0 8px #f59e0b;
-  animation: admissionPulse 1.8s ease-in-out infinite;
+  background-color: #fef200;
+  box-shadow: 0 0 8px #fef200;
+  animation: bannerPulse 1.8s ease-in-out infinite;
 }
 
-@keyframes admissionPulse {
+@keyframes bannerPulse {
   0%, 100% {
     opacity: 1;
     transform: scale(1);
   }
   50% {
     opacity: 0.35;
-    transform: scale(0.8);
+    transform: scale(0.85);
   }
 }
 
-/* Main Body of Poster */
+/* Main Body */
 .admission-poster__body {
-  padding: clamp(1.5rem, 4vw, 2.5rem);
+  padding: clamp(1.5rem, 4vw, 2.75rem);
   text-align: center;
 }
 
-/* Brand Emblem Header */
+/* Brand Header */
 .admission-poster__brand {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
   margin-bottom: var(--space-lg);
 }
 
 .admission-poster__logo-wrap {
   position: relative;
-  width: 104px;
-  height: 104px;
+  width: 108px;
+  height: 108px;
   padding: 4px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1e3a8a, #3b82f6, #f59e0b);
-  box-shadow: 0 8px 20px -4px rgba(30, 58, 138, 0.3);
+  background: linear-gradient(135deg, #2d2d85 0%, #007cc1 60%, #fef200 100%);
+  box-shadow: 0 8px 24px -4px rgba(45, 45, 133, 0.35);
+  margin-bottom: var(--space-2xs);
 }
 
 .admission-poster__logo-inner {
@@ -127,41 +136,42 @@
 
 .admission-poster__school-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.6rem, 3.5vw, 2.35rem);
+  font-size: clamp(1.85rem, 3.8vw, 2.5rem);
   font-weight: 800;
-  color: #0f172a;
-  line-height: 1.2;
+  color: #18184c;
+  line-height: 1.15;
   margin: 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
 .admission-poster__school-en {
   font-family: var(--font-sans);
-  font-size: clamp(0.875rem, 1.4vw, 1.05rem);
+  font-size: clamp(0.875rem, 1.4vw, 1.0625rem);
   font-weight: 700;
-  color: #1e40af;
+  color: #007cc1;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-top: 2px;
 }
 
 .admission-poster__tagline {
-  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  font-size: clamp(0.9rem, 1.25vw, 1.05rem);
   color: #475569;
   font-weight: 500;
-  max-width: 620px;
+  max-width: 640px;
   margin: var(--space-xs) auto 0 auto;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
-/* Admission Callout Banner Box */
+/* Highlight Announcement Box */
 .admission-poster__highlight-box {
-  background: linear-gradient(135deg, #eff6ff 0%, #fef3c7 100%);
+  background: linear-gradient(135deg, #f0f7ff 0%, #fffdf0 100%);
   border: 2px solid #bfdbfe;
   border-radius: var(--radius-lg);
-  padding: clamp(1rem, 2.5vw, 1.5rem);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
   margin-block: var(--space-xl);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 16px -2px rgba(45, 45, 133, 0.08);
+  position: relative;
 }
 
 .admission-poster__badge-main {
@@ -170,65 +180,67 @@
   gap: 8px;
   background: #dc2626;
   color: #ffffff;
-  padding: 6px 18px;
+  padding: 6px 20px;
   border-radius: var(--radius-pill);
-  font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+  font-size: clamp(0.875rem, 1.5vw, 1.05rem);
   font-weight: 800;
   letter-spacing: 0.02em;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.35);
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
   margin-bottom: var(--space-sm);
 }
 
 .admission-poster__headline {
   font-family: var(--font-heading);
-  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  font-size: clamp(1.4rem, 2.7vw, 2.1rem);
   font-weight: 800;
-  color: #1e3a8a;
+  color: #2d2d85;
   margin: 0 0 var(--space-xs) 0;
-  line-height: 1.3;
+  line-height: 1.28;
 }
 
 .admission-poster__subtext {
-  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  font-size: clamp(0.925rem, 1.2vw, 1.0625rem);
   color: #334155;
   font-weight: 600;
-  max-width: 660px;
+  max-width: 680px;
   margin-inline: auto;
   line-height: 1.6;
 }
 
-/* Feature Highlights Grid */
+/* Feature Pillars Grid */
 .admission-poster__features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
   margin-bottom: var(--space-xl);
   text-align: left;
 }
 
 .admission-poster__feature-card {
-  background: #f8fafc;
+  background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: var(--radius-md);
-  padding: var(--space-md);
+  padding: clamp(1rem, 2vw, 1.25rem);
   display: flex;
   align-items: flex-start;
   gap: var(--space-sm);
-  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .admission-poster__feature-card:hover {
   transform: translateY(-2px);
-  border-color: #3b82f6;
-  background: #ffffff;
+  border-color: #007cc1;
+  box-shadow: 0 6px 16px -2px rgba(0, 124, 193, 0.15);
 }
 
 .admission-poster__feature-icon {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-sm);
   background: #eff6ff;
-  color: #1d4ed8;
+  color: #2d2d85;
+  border: 1px solid #dbeafe;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -237,20 +249,20 @@
 
 .admission-poster__feature-title {
   font-family: var(--font-heading);
-  font-size: 0.975rem;
+  font-size: 1.025rem;
   font-weight: 700;
-  color: #0f172a;
-  margin: 0 0 2px 0;
+  color: #18184c;
+  margin: 0 0 4px 0;
 }
 
 .admission-poster__feature-desc {
-  font-size: 0.8125rem;
-  color: #64748b;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.55;
   margin: 0;
 }
 
-/* Conversion Action Buttons */
+/* Conversion Action Row */
 .admission-poster__actions {
   display: flex;
   align-items: center;
@@ -264,21 +276,22 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 28px;
+  padding: 14px 30px;
   border-radius: var(--radius-pill);
-  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  background: linear-gradient(135deg, #2d2d85 0%, #1e2677 100%);
   color: #ffffff;
   font-family: var(--font-heading);
   font-size: 1.0625rem;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 6px 18px rgba(29, 78, 216, 0.35);
+  box-shadow: 0 6px 20px rgba(45, 45, 133, 0.38);
+  border: 1px solid rgba(254, 242, 0, 0.3);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .admission-btn-call:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(29, 78, 216, 0.45);
+  box-shadow: 0 8px 26px rgba(45, 45, 133, 0.5);
   color: #ffffff;
 }
 
@@ -286,27 +299,51 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 28px;
+  padding: 14px 30px;
   border-radius: var(--radius-pill);
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: #ffffff;
   font-family: var(--font-heading);
   font-size: 1.0625rem;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .admission-btn-whatsapp:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.45);
+  box-shadow: 0 8px 26px rgba(16, 185, 129, 0.45);
   color: #ffffff;
 }
 
-/* Footer Details / Address & Hours */
+.admission-btn-map {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: var(--radius-pill);
+  background: #ffffff;
+  color: #2d2d85;
+  border: 1.5px solid #cbd5e1;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+  transition: all var(--transition-fast);
+}
+
+.admission-btn-map:hover {
+  border-color: #007cc1;
+  color: #007cc1;
+  background: #f0f7ff;
+  transform: translateY(-2px);
+}
+
+/* Footer Strip */
 .admission-poster__footer {
-  background: #f1f5f9;
+  background: #f8fafc;
   border-top: 1px solid #e2e8f0;
   padding: var(--space-md) var(--space-lg);
   display: flex;
@@ -314,7 +351,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   gap: var(--space-md);
-  font-size: 0.825rem;
+  font-size: 0.85rem;
   color: #475569;
 }
 
@@ -325,18 +362,18 @@
 }
 
 .admission-poster__info-icon {
-  color: #2563eb;
+  color: #007cc1;
   flex-shrink: 0;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 640px) {
-  .admission-wrapper {
-    padding: var(--space-sm);
+/* Responsive Rules */
+@media (max-width: 768px) {
+  .admission-poster__features {
+    grid-template-columns: 1fr;
   }
 
   .admission-poster__body {
-    padding: 1.25rem;
+    padding: 1.5rem var(--space-md);
   }
 
   .admission-poster__actions {
@@ -345,7 +382,8 @@
   }
 
   .admission-btn-call,
-  .admission-btn-whatsapp {
+  .admission-btn-whatsapp,
+  .admission-btn-map {
     width: 100%;
     justify-content: center;
   }
