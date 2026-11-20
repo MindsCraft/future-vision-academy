@@ -1,5 +1,20 @@
+/* ==========================================================================
+   Future Vision Academy — Global Stylesheet
+   Strictly Monochrome Black & White Palette
+   ========================================================================== */
+
 @import "./foundation/variables.css";
 @import "./foundation/reset.css";
 @import "./foundation/typography.css";
 @import "./foundation/layout.css";
-@import "./pages/admission-banner.css";
+
+/* Core Components */
+@import "./components/button.css";
+@import "./components/badge.css";
+@import "./components/card.css";
+@import "./components/announcement-banner.css";
+@import "./components/navbar.css";
+@import "./components/footer.css";
+
+/* Home Page */
+@import "./pages/home.css";

@@ -1,7 +1,12 @@
+/* ==========================================================================
+   Badge Component (Black & White Minimalist)
+   ========================================================================== */
+
 .badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 5px;
   font-family: var(--font-heading);
   font-weight: 700;
   border-radius: var(--radius-pill);
@@ -20,26 +25,30 @@
 }
 
 .badge--primary {
-  background-color: var(--color-primary-50);
-  color: var(--color-primary-700);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-black);
 }
 
 .badge--accent {
-  background-color: var(--color-accent-50);
-  color: var(--color-accent-700);
-}
-
-.badge--success {
-  background-color: #ecfdf5;
-  color: #047857;
-}
-
-.badge--warning {
-  background-color: #fffbeb;
-  color: #b45309;
+  background-color: var(--color-gray-900);
+  color: var(--color-white);
 }
 
 .badge--neutral {
   background-color: var(--color-gray-100);
-  color: var(--color-text-body);
+  color: var(--color-gray-800);
+  border: 1px solid var(--color-gray-200);
+}
+
+.badge--outline {
+  background-color: transparent;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+}
+
+.badge--inverted {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-white);
 }

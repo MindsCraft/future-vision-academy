@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Card Component (Black & White Minimalist)
+   ========================================================================== */
+
 .card {
   background-color: var(--color-bg-card);
   border-radius: var(--radius-md);
@@ -13,7 +17,7 @@
 
 .card--flat {
   background-color: var(--color-bg-subtle);
-  border: 1px solid transparent;
+  border: 1px solid var(--color-border-subtle);
 }
 
 .card--outline {
@@ -21,14 +25,19 @@
   border: 1px solid var(--color-border);
 }
 
+.card--dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-gray-800);
+}
+
 .card--interactive {
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
-  cursor: pointer;
 }
 
 .card--interactive:hover {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-black);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }

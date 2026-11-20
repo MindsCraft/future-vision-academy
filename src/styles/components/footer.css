@@ -1,7 +1,11 @@
+/* ==========================================================================
+   Footer Component (Black & White Minimalist Architectural)
+   ========================================================================== */
+
 .footer {
-  background-color: var(--color-gray-900);
+  background-color: var(--color-black);
   color: var(--color-gray-300);
-  padding-top: var(--space-4xl);
+  padding-top: var(--space-3xl);
   padding-bottom: var(--space-xl);
   border-top: 1px solid var(--color-gray-800);
   margin-top: auto;
@@ -9,9 +13,9 @@
 
 .footer__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1.2fr 1.5fr;
+  grid-template-columns: 2fr 1.1fr 1.1fr 1.4fr;
   gap: var(--space-2xl);
-  padding-bottom: var(--space-3xl);
+  padding-bottom: var(--space-2xl);
   border-bottom: 1px solid var(--color-gray-800);
 }
 
@@ -19,52 +23,83 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
-.footer__logo-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-sm);
-  background: var(--color-primary-600);
-  color: var(--color-white);
+.footer__logo-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-xs);
+  background: var(--color-white);
+  padding: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.footer__logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+}
+
+.footer__brand-title {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__brand-name {
   font-family: var(--font-heading);
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-white);
+  line-height: 1.2;
+}
+
+.footer__brand-sub {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--color-gray-400);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .footer__desc {
-  font-size: 0.875rem;
+  font-size: 0.84rem;
   line-height: 1.6;
   color: var(--color-gray-400);
   margin-bottom: var(--space-md);
-  max-width: 380px;
+  max-width: 360px;
 }
 
-.footer__eiin {
+.footer__badges {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: var(--space-xs);
+}
+
+.footer__badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  background-color: var(--color-gray-900);
+  border: 1px solid var(--color-gray-800);
+  border-radius: var(--radius-pill);
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-primary-500);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  color: var(--color-gray-300);
 }
 
 .footer__title {
   font-family: var(--font-heading);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 700;
   color: var(--color-white);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: var(--space-md);
 }
@@ -76,21 +111,25 @@
 }
 
 .footer__link {
-  font-size: 0.875rem;
+  font-size: 0.84rem;
   color: var(--color-gray-400);
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .footer__link:hover {
   color: var(--color-white);
+  transform: translateX(2px);
 }
 
 .footer__contact-list {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  font-size: 0.875rem;
+  font-size: 0.84rem;
   color: var(--color-gray-400);
 }
 
@@ -102,25 +141,27 @@
 }
 
 .footer__icon {
-  color: var(--color-primary-500);
+  color: var(--color-gray-300);
   flex-shrink: 0;
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .footer__contact-list a {
-  color: var(--color-gray-400);
+  color: var(--color-gray-300);
   transition: color var(--transition-fast);
+  text-decoration: none;
 }
 
 .footer__contact-list a:hover {
   color: var(--color-white);
+  text-decoration: underline;
 }
 
 .footer__bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: var(--space-xl);
+  padding-top: var(--space-lg);
   font-size: 0.8125rem;
   color: var(--color-gray-500);
 }
@@ -128,12 +169,13 @@
 .footer__bottom-links {
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
+  gap: var(--space-md);
 }
 
 .footer__bottom-link {
   color: var(--color-gray-500);
   transition: color var(--transition-fast);
+  text-decoration: none;
 }
 
 .footer__bottom-link:hover {
