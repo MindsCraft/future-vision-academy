@@ -22,22 +22,16 @@ export const Navbar: React.FC = () => {
   return (
     <header className="navbar-wrapper">
       <div className="navbar container">
-        {/* Brand */}
-        <Link href="/" className="navbar__brand" aria-label="মূল পাতায় যান">
-          <div className="navbar__logo-wrap">
-            <Image
-              src="/images/logo-icon.png"
-              alt={`${siteConfig.name} লোগো`}
-              width={40}
-              height={40}
-              className="navbar__logo-img"
-              priority
-            />
-          </div>
-          <div className="navbar__brand-text">
-            <span className="navbar__brand-name">{siteConfig.shortName}</span>
-            <span className="navbar__brand-sub">{siteConfig.name}</span>
-          </div>
+        {/* Main Logo with Name */}
+        <Link href="/" className="navbar__brand" aria-label="ফিউচার ভিশন একাডেমি — হোম">
+          <Image
+            src="/images/logo-with-name.png"
+            alt={`${siteConfig.name} (${siteConfig.shortName})`}
+            width={280}
+            height={52}
+            className="navbar__logo-img"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -109,7 +103,7 @@ export const Navbar: React.FC = () => {
           <div className="navbar__mobile-actions">
             <a
               href={`tel:${rawPhone}`}
-              className="btn btn--outline btn--full"
+              className="btn btn--secondary btn--full"
             >
               <Phone size={16} />
               <span>সরাসরি কল: {phoneNumber}</span>

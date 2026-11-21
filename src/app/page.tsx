@@ -354,7 +354,7 @@ export default function HomePage() {
                     <span>ক্লাব ও ভর্তির বিস্তারিত জানুন</span>
                     <ArrowRight size={16} />
                   </a>
-                  <a href={`tel:${rawPhone}`} className="btn btn--outline" style={{ color: '#ffffff', borderColor: '#ffffff' }}>
+                  <a href={`tel:${rawPhone}`} className="btn" style={{ background: '#27272a', color: '#ffffff' }}>
                     <Phone size={16} />
                     <span>পরামর্শের জন্য কল করুন</span>
                   </a>
@@ -664,7 +664,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="flex gap-sm flex-wrap items-center mt-md pt-md border-top">
+              <div className="flex gap-sm flex-wrap items-center mt-md pt-md">
                 <a href={`tel:${rawPhone}`} className="btn btn--primary">
                   <Phone size={16} />
                   <span>সরাসরি কল দিন</span>

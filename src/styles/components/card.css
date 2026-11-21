@@ -1,44 +1,41 @@
 /* ==========================================================================
-   Card Component (Black & White Minimalist)
+   Card Component (Flat, Borderless & Shadowless)
    ========================================================================== */
 
 .card {
   background-color: var(--color-bg-card);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .card--default {
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
+  background-color: var(--color-gray-50);
 }
 
 .card--flat {
-  background-color: var(--color-bg-subtle);
-  border: 1px solid var(--color-border-subtle);
+  background-color: var(--color-gray-100);
 }
 
 .card--outline {
-  background-color: transparent;
-  border: 1px solid var(--color-border);
+  background-color: var(--color-gray-50);
 }
 
 .card--dark {
   background-color: var(--color-black);
   color: var(--color-white);
-  border: 1px solid var(--color-gray-800);
 }
 
 .card--interactive {
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
+  background-color: var(--color-gray-50);
+  cursor: pointer;
 }
 
 .card--interactive:hover {
-  border-color: var(--color-black);
-  box-shadow: var(--shadow-md);
+  background-color: var(--color-gray-100);
   transform: translateY(-2px);
 }
 

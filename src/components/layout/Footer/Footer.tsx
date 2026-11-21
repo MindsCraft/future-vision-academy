@@ -18,19 +18,13 @@ export const Footer: React.FC = () => {
           {/* Column 1: School Brand */}
           <div>
             <div className="footer__brand">
-              <div className="footer__logo-wrap">
-                <Image
-                  src="/images/logo-icon.png"
-                  alt={`${siteConfig.name} লোগো`}
-                  width={34}
-                  height={34}
-                  className="footer__logo-img"
-                />
-              </div>
-              <div className="footer__brand-title">
-                <span className="footer__brand-name">{siteConfig.shortName}</span>
-                <span className="footer__brand-sub">{siteConfig.name}</span>
-              </div>
+              <Image
+                src="/images/logo-with-name.png"
+                alt={`${siteConfig.name} (${siteConfig.shortName})`}
+                width={260}
+                height={48}
+                className="footer__logo-img"
+              />
             </div>
 
             <p className="footer__desc">
@@ -57,7 +51,7 @@ export const Footer: React.FC = () => {
                 <Link href="#admissions" className="footer__link">ভর্তি বিজ্ঞপ্তি ২০২৬</Link>
               </li>
               <li>
-                <Link href="#academics" className="footer__link">শ্রেণি কার্যক্রম</Link>
+                <Link href="#academics" className="footer__link">শিক্ষা কার্যক্রম</Link>
               </li>
               <li>
                 <Link href="#english-club" className="footer__link">English Language Club</Link>

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Badge Component (Black & White Minimalist)
+   Badge Component (Flat, Borderless & Shadowless)
    ========================================================================== */
 
 .badge {
@@ -12,22 +12,23 @@
   border-radius: var(--radius-pill);
   line-height: 1;
   white-space: nowrap;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .badge--sm {
   font-size: 0.6875rem;
-  padding: 3px 8px;
+  padding: 4px 10px;
 }
 
 .badge--md {
   font-size: 0.75rem;
-  padding: 4px 10px;
+  padding: 5px 12px;
 }
 
 .badge--primary {
   background-color: var(--color-black);
   color: var(--color-white);
-  border: 1px solid var(--color-black);
 }
 
 .badge--accent {
@@ -38,17 +39,14 @@
 .badge--neutral {
   background-color: var(--color-gray-100);
   color: var(--color-gray-800);
-  border: 1px solid var(--color-gray-200);
 }
 
 .badge--outline {
-  background-color: transparent;
+  background-color: var(--color-gray-100);
   color: var(--color-black);
-  border: 1px solid var(--color-black);
 }
 
 .badge--inverted {
   background-color: var(--color-white);
   color: var(--color-black);
-  border: 1px solid var(--color-white);
 }
