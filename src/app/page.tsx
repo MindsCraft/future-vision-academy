@@ -21,6 +21,7 @@ import {
   ArrowRight,
   ExternalLink,
   ChevronRight,
+  Heart,
 } from 'lucide-react';
 import { siteConfig, googleMapsConfig } from '@/config/site';
 
@@ -52,13 +53,13 @@ export default function HomePage() {
               </div>
 
               <h1 className="home-hero__title">
-                জ্ঞান, শৃঙ্খলা ও আধুনিক{' '}
-                <span className="home-hero__title-highlight">ইংরেজি চর্চার</span>{' '}
-                আদর্শ বিদ্যাপীঠ
+                জ্ঞান, শৃঙ্খলা, আধুনিক{' '}
+                <span className="home-hero__title-highlight">ইংরেজি চর্চা</span>{' '}
+                ও নৈতিকতার বিদ্যাপীঠ
               </h1>
 
               <p className="home-hero__desc">
-                গফরগাঁও পৌর শহরের পশু হাসপাতাল রোডে অবস্থিত ফিউচার ভিশন একাডেমি জাতীয় শিক্ষাক্রম (NCTB) ও বিশেষ English Language Club সমন্বয়ে পরিচালিত এক আধুনিক শিক্ষাঙ্গন। সার্বক্ষণিক সিসিটিভি নিয়ন্ত্রিত নিরাপদ পরিবেশে শিশুদের মেধা ও মনন বিকাশে আমরা দায়বদ্ধ।
+                গফরগাঁও পৌর শহরের পশু হাসপাতাল রোডে অবস্থিত ফিউচার ভিশন একাডেমি জাতীয় শিক্ষাক্রম (NCTB), বিশেষ English Language Club এবং সহীহ কুরআন শিক্ষার সমন্বয়ে পরিচালিত এক আদর্শ শিক্ষাপ্রতিষ্ঠান। সার্বক্ষণিক সিসিটিভি নিয়ন্ত্রিত নিরাপদ পরিবেশে শিশুদের মেধা ও মনন বিকাশে আমরা দায়বদ্ধ।
               </p>
 
               <div className="home-hero__actions">
@@ -121,12 +122,12 @@ export default function HomePage() {
 
             <div className="home-hero__stat-cell">
               <div className="home-hero__stat-value">English Club</div>
-              <div className="home-hero__stat-label">স্পোকেন ও ফোনিক্স</div>
+              <div className="home-hero__stat-label">স্পোকেন ও ফনেটিক্স</div>
             </div>
 
             <div className="home-hero__stat-cell">
-              <div className="home-hero__stat-value">১০০% সিসিটিভি</div>
-              <div className="home-hero__stat-label">নিরাপদ ক্যাম্পাস</div>
+              <div className="home-hero__stat-value">সহীহ কুরআন</div>
+              <div className="home-hero__stat-label">তাজভীদ ও নৈতিক ক্লাস</div>
             </div>
           </div>
         </div>
@@ -222,7 +223,7 @@ export default function HomePage() {
               </div>
               <h3 className="pillar-card__title">জাতীয় শিক্ষাক্রম (NCTB)</h3>
               <p className="pillar-card__desc">
-                জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড কর্তৃক নির্ধারিত মানসম্মত পাঠ্যবইয়ের সহজবোধ্য পাঠদান এবং প্রতিটি বিষয়ে বিষয়ভিত্তিক ধারণাগত স্পষ্টতা নিশ্চিতকরণ।
+                জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড কর্তৃক নির্ধারিত মানসম্মত পাঠ্যবইয়ের সহজবোধ্য পাঠদান এবং প্রতিটি বিষয়ে ধারণাগত স্পষ্টতা নিশ্চিতকরণ।
               </p>
               <span className="pillar-card__tag">Bangla Medium</span>
             </div>
@@ -242,6 +243,18 @@ export default function HomePage() {
             {/* Pillar 3 */}
             <div className="pillar-card">
               <div className="pillar-card__icon-wrap">
+                <Heart size={24} />
+              </div>
+              <h3 className="pillar-card__title">সহীহ কুরআন ও নৈতিক শিক্ষা</h3>
+              <p className="pillar-card__desc">
+                শিশুর আত্মিক ও মানবিক মূল্যবোধের বিকাশে সহীহ মাখরাজ ও তাজভীদের সাথে কুরআন তিলাওয়াত, মাসনূন দো&apos;আ ও শিষ্টাচারের নিয়মিত পাঠ।
+              </p>
+              <span className="pillar-card__tag">Moral & Quran Class</span>
+            </div>
+
+            {/* Pillar 4 */}
+            <div className="pillar-card">
+              <div className="pillar-card__icon-wrap">
                 <ShieldCheck size={24} />
               </div>
               <h3 className="pillar-card__title">সিসিটিভি ও পূর্ণাঙ্গ নিরাপত্তা</h3>
@@ -251,7 +264,7 @@ export default function HomePage() {
               <span className="pillar-card__tag">100% Monitored</span>
             </div>
 
-            {/* Pillar 4 */}
+            {/* Pillar 5 */}
             <div className="pillar-card">
               <div className="pillar-card__icon-wrap">
                 <Users size={24} />
@@ -261,18 +274,6 @@ export default function HomePage() {
                 অভিজ্ঞ শিক্ষক-শিক্ষিকা কর্তৃক প্রতিটি শিশুর মেধা ও প্রয়োজন অনুযায়ী ব্যক্তিগত নজরদারি এবং নিয়মিত ক্লাস টেস্ট ও মূল্যায়ন।
               </p>
               <span className="pillar-card__tag">Dedicated Faculty</span>
-            </div>
-
-            {/* Pillar 5 */}
-            <div className="pillar-card">
-              <div className="pillar-card__icon-wrap">
-                <Compass size={24} />
-              </div>
-              <h3 className="pillar-card__title">নৈতিক শিক্ষা ও শৃঙ্খলা</h3>
-              <p className="pillar-card__desc">
-                দৈনন্দিন সমাবেশ, নৈতিক মূল্যবোধ চর্চা, বড়দের প্রতি শ্রদ্ধা এবং সময় সচেতনতা ও নিয়মানুবর্তিতা গঠন।
-              </p>
-              <span className="pillar-card__tag">Moral & Discipline</span>
             </div>
 
             {/* Pillar 6 */}
@@ -287,155 +288,10 @@ export default function HomePage() {
               <span className="pillar-card__tag">Co-Curricular</span>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ====================================================================
-          4. English Language Club Spotlight (Navy Inverted Banner)
-          ==================================================================== */}
-      <section className="section" id="english-club">
-        <div className="container">
-          <div className="english-club-spotlight">
-            <div className="english-club__grid">
-              <div>
-                <span className="section-tag section-tag--inverted">
-                  বিশেষ আকর্ষণ • English Language Club
-                </span>
-                <h2 className="english-club__title">
-                  মুখস্থ বিদ্যা নয়, বাস্তব জীবনে সাবলীল ইংরেজি কথোপকথনের নিশ্চয়তা
-                </h2>
-                <p className="english-club__desc">
-                  গফরগাঁওয়ে আমাদের একাডেমি শিশুদের জন্য চালু করেছে একটি সুপরিকল্পিত English Language Club। আধুনিক বিশ্বে যোগাযোগের প্রধান ভাষা হিসেবে ইংরেজি যেন শিশুদের কাছে ভীতিকর না হয়ে আনন্দের মাধ্যমে আত্মস্থ হয়—সে লক্ষ্যেই আমাদের এই বিশেষ উদ্যোগ।
-                </p>
-
-                <div className="flex gap-md flex-wrap items-center">
-                  <Link href="/english-club" className="btn btn--inverted btn--lg">
-                    <span>ক্লাবের সম্পূর্ণ কার্যক্রম ও ছবি দেখুন</span>
-                    <ArrowRight size={18} />
-                  </Link>
-                  <a
-                    href={`tel:${rawPhone}`}
-                    className="btn btn--secondary btn--lg"
-                  >
-                    <Phone size={16} />
-                    <span>পরামর্শের জন্য কল করুন</span>
-                  </a>
-                </div>
-              </div>
-
-              {/* 4 Specialized Modules */}
-              <div className="english-club__modules">
-                <div className="english-module-card">
-                  <h4 className="english-module-title">১. Phonics & Pronunciation</h4>
-                  <p className="english-module-desc">
-                    শুদ্ধ উচ্চারণ ও ইংরেজি বর্ণমালার সাউন্ড ভিত্তিক সহজ শিখন।
-                  </p>
-                </div>
-
-                <div className="english-module-card">
-                  <h4 className="english-module-title">২. Daily Spoken Drills</h4>
-                  <p className="english-module-desc">
-                    ক্লাসরুম ও প্রাত্যহিক জীবনের কথোপকথনে স্বতঃস্ফূর্ত ইংরেজি চর্চা।
-                  </p>
-                </div>
-
-                <div className="english-module-card">
-                  <h4 className="english-module-title">৩. Vocabulary & Games</h4>
-                  <p className="english-module-desc">
-                    ইন্টারেক্টিভ গেমস ও ফ্ল্যাশকার্ডের সাহায্যে প্রয়োজনীয় শব্দভাণ্ডার সমৃদ্ধকরণ।
-                  </p>
-                </div>
-
-                <div className="english-module-card">
-                  <h4 className="english-module-title">৪. Stage Presentation</h4>
-                  <p className="english-module-desc">
-                    মাইকে কথা বলা ও সহপাঠীদের সামনে জড়তাহীন প্রেজেন্টেশন উপস্থাপনা।
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ====================================================================
-          5. Meet Our Caring Teachers (Faculty Spotlight)
-          ==================================================================== */}
-      <section className="section section--subtle">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-tag">শিক্ষক মণ্ডলী</span>
-            <h2 className="section-title">অভিজ্ঞ ও স্নেহশীল শিক্ষকমণ্ডলীর তত্ত্বাবধান</h2>
-            <p className="section-desc">
-              প্রতিটি শিশুর মানসিক ও মেধা বিকাশে আমাদের শিক্ষকগণ নিবেদিতপ্রাণ।
-            </p>
-          </div>
-
-          <div className="grid grid-3 gap-lg">
-            {/* Teacher 1 */}
-            <div className="teacher-card">
-              <div className="teacher-card__img-wrap">
-                <Image
-                  src="/images/showcase/teacher-lead.jpg"
-                  alt="প্রধান শিক্ষক / পরিচালক"
-                  width={400}
-                  height={400}
-                  className="teacher-card__img"
-                />
-              </div>
-              <div className="teacher-card__body">
-                <h3 className="teacher-card__name">অধ্যক্ষ / পরিচালনা পর্ষদ</h3>
-                <span className="teacher-card__role">প্রশাসনিক প্রধান ও অ্যাকাডেমিক সমন্বয়কারী</span>
-                <p className="teacher-card__desc">
-                  “প্রতিটি শিশুর ভেতরের সুপ্ত প্রতিভাকে বিকশিত করে তাকে নৈতিক ও আধুনিক মানুষ হিসেবে গড়ে তোলাই আমাদের লক্ষ্য।”
-                </p>
-              </div>
-            </div>
-
-            {/* Teacher 2 */}
-            <div className="teacher-card">
-              <div className="teacher-card__img-wrap">
-                <Image
-                  src="/images/showcase/teacher-female.jpg"
-                  alt="ইংরেজি ও ভাষা প্রশিক্ষক"
-                  width={400}
-                  height={400}
-                  className="teacher-card__img"
-                />
-              </div>
-              <div className="teacher-card__body">
-                <h3 className="teacher-card__name">ইংরেজি ভাষা প্রশিক্ষক</h3>
-                <span className="teacher-card__role">English Language Club কো-অর্ডিনেটর</span>
-                <p className="teacher-card__desc">
-                  ফনেটিক্স ও সাবলীল স্পোকেন ইংলিশের মাধ্যমে শিশুদের ভাষাগত আত্মবিশ্বাস ও যোগাযোগ দক্ষতা বৃদ্ধি করেন।
-                </p>
-              </div>
-            </div>
-
-            {/* Teacher 3 */}
-            <div className="teacher-card">
-              <div className="teacher-card__img-wrap">
-                <Image
-                  src="/images/showcase/teacher-male.jpg"
-                  alt="গণিত ও বিজ্ঞান শিক্ষক"
-                  width={400}
-                  height={400}
-                  className="teacher-card__img"
-                />
-              </div>
-              <div className="teacher-card__body">
-                <h3 className="teacher-card__name">গণিত ও বিজ্ঞান শিক্ষক</h3>
-                <span className="teacher-card__role">প্রাথমিক ও মাধ্যমিক স্তর</span>
-                <p className="teacher-card__desc">
-                  সহজবোধ্য উদাহরণ ও প্র্যাকটিক্যাল ডেমোনস্ট্রেশনের মাধ্যমে গণিত ও বিজ্ঞানের ভয় দূর করতে সচেষ্ট।
-                </p>
-              </div>
-            </div>
-          </div>
 
           <div className="text-center mt-xl">
-            <Link href="/about" className="btn btn--secondary btn--lg">
-              <span>আমাদের শিক্ষক মণ্ডলী ও লক্ষ্য সম্পর্কে বিস্তারিত জানুন</span>
+            <Link href="/academics" className="btn btn--secondary btn--lg">
+              <span>আমাদের পূর্ণাঙ্গ শিক্ষা ও কারিকুলাম পেজ দেখুন</span>
               <ArrowRight size={18} />
             </Link>
           </div>
@@ -443,9 +299,9 @@ export default function HomePage() {
       </section>
 
       {/* ====================================================================
-          6. Admissions Spotlight Section
+          4. Admissions Spotlight Section
           ==================================================================== */}
-      <section className="section" id="admissions">
+      <section className="section section--subtle" id="admissions">
         <div className="container">
           <div className="section-header">
             <span className="section-tag section-tag--accent">ভর্তি তথ্য ২০২৬</span>
@@ -577,9 +433,9 @@ export default function HomePage() {
       </section>
 
       {/* ====================================================================
-          7. Location & Contact Section
+          5. Location & Contact Section
           ==================================================================== */}
-      <section className="section section--subtle" id="contact">
+      <section className="section" id="contact">
         <div className="container">
           <div className="section-header">
             <span className="section-tag">যোগাযোগ ও অবস্থান</span>

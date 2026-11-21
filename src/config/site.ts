@@ -4,9 +4,9 @@ export const siteConfig: SiteConfig = {
   name: 'Future Vision Academy',
   shortName: 'ফিউচার ভিশন একাডেমি',
   url: 'https://futurevisionacademy.edu.bd',
-  tagline: 'জ্ঞান, শৃঙ্খলা ও আধুনিক ইংরেজি চর্চার আদর্শ বিদ্যাপীঠ',
+  tagline: 'জ্ঞান, শৃঙ্খলা, আধুনিক ইংরেজি ও নৈতিক শিক্ষার আদর্শ বিদ্যাপীঠ',
   description:
-    'গফরগাঁও পৌর শহরের পশু হাসপাতাল রোডে মনোরম ও সম্পূর্ণ সিসিটিভি নিয়ন্ত্রিত নিরাপদ পরিবেশে প্লে থেকে ১০ম শ্রেণির আধুনিক শিক্ষা প্রতিষ্ঠান। বাংলা মাধ্যমের পাশাপাশি রয়েছে বিশেষ English Language Club। বর্তমানে প্লে থেকে ৮ম শ্রেণিতে নতুন শিক্ষাবর্ষে ভর্তি চলছে।',
+    'গফরগাঁও পৌর শহরের পশু হাসপাতাল রোডে মনোরম ও সম্পূর্ণ সিসিটিভি নিয়ন্ত্রিত নিরাপদ পরিবেশে প্লে থেকে ১০ম শ্রেণির আধুনিক শিক্ষা প্রতিষ্ঠান। জাতীয় শিক্ষাক্রমের পাশাপাশি রয়েছে বিশেষ English Language Club এবং সহীহ কুরআন শিক্ষা ক্লাস। বর্তমানে প্লে থেকে ৮ম শ্রেণিতে নতুন শিক্ষাবর্ষে ভর্তি চলছে।',
   eiin: 'গফরগাঁও, ময়মনসিংহ',
   established: 2025,
   contact: {
@@ -30,21 +30,16 @@ export const googleMapsConfig = {
 };
 
 export const mainNavItems: NavItem[] = [
-  { label: 'হোম', href: '/' },
-  { label: 'পরিচিতি ও শিক্ষক', href: '/about' },
-  { label: 'শিক্ষা কার্যক্রম', href: '/academics' },
-  { label: 'ইংলিশ ক্লাব', href: '/english-club', badge: 'Special' },
+  { label: 'আমাদের পরিচিতি', href: '/about' },
+  { label: 'শিক্ষা ও কারিকুলাম', href: '/academics' },
   { label: 'ভর্তি তথ্য', href: '/admissions', badge: '২০২৬' },
-  { label: 'ক্যাম্পাস জীবন', href: '/campus-life' },
-  { label: 'যোগাযোগ', href: '/contact' },
 ];
 
 export const footerNavItems: NavItem[] = [
   { label: 'মূল পাতা (Home)', href: '/' },
   { label: 'আমাদের পরিচিতি (About Us)', href: '/about' },
-  { label: 'শিক্ষা কার্যক্রম (Academics)', href: '/academics' },
-  { label: 'ইংলিশ ক্লাব (English Club)', href: '/english-club' },
+  { label: 'শিক্ষা ও কারিকুলাম (Curriculum)', href: '/academics' },
   { label: 'ভর্তি তথ্য ২০২৬ (Admissions)', href: '/admissions' },
-  { label: 'ক্যাম্পাস গ্যালারি (Campus Life)', href: '/campus-life' },
+  { label: 'বাস্তব চিত্র ও গ্যালারি (Gallery)', href: '/campus-life' },
   { label: 'যোগাযোগ ও মানচিত্র (Contact)', href: '/contact' },
 ];

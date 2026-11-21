@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, Phone, Clock, ExternalLink, ShieldCheck, Sparkles } from 'lucide-react';
+import { MapPin, Phone, Clock, ExternalLink, ShieldCheck, Sparkles, BookOpen, Heart } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 
 export const Footer: React.FC = () => {
@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
             </div>
 
             <p className="footer__desc">
-              গফরগাঁও পৌর শহরে জাতীয় শিক্ষাক্রম (NCTB) এবং বিশেষ English Language Club সমন্বয়ে পরিচালিত আদর্শ শিক্ষাঙ্গন।
+              গফরগাঁও পৌর শহরে জাতীয় শিক্ষাক্রম (NCTB), বিশেষ English Language Club এবং সহীহ কুরআন শিক্ষার সমন্বয়ে পরিচালিত এক আদর্শ বিদ্যাপীঠ।
             </p>
 
             <div className="footer__badges">
@@ -54,38 +54,38 @@ export const Footer: React.FC = () => {
                 <Link href="/about" className="footer__link">আমাদের পরিচিতি ও শিক্ষক</Link>
               </li>
               <li>
-                <Link href="/academics" className="footer__link">শ্রেণি কার্যক্রম ও কারিকুলাম</Link>
-              </li>
-              <li>
-                <Link href="/english-club" className="footer__link">English Language Club</Link>
+                <Link href="/academics" className="footer__link">শিক্ষা ও কারিকুলাম</Link>
               </li>
               <li>
                 <Link href="/admissions" className="footer__link">ভর্তি তথ্য ২০২৬</Link>
               </li>
               <li>
-                <Link href="/campus-life" className="footer__link">বাস্তব চিত্র ও ক্যাম্পাস জীবন</Link>
+                <Link href="/campus-life" className="footer__link">বাস্তব চিত্র ও গ্যালারি</Link>
+              </li>
+              <li>
+                <Link href="/contact" className="footer__link">যোগাযোগ ও মানচিত্র</Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Academic Stages */}
+          {/* Column 3: Academic Highlights */}
           <div>
-            <h3 className="footer__title">শিক্ষা স্তর</h3>
+            <h3 className="footer__title">কারিকুলাম ও বিশেষত্ব</h3>
             <ul className="footer__list">
               <li>
-                <Link href="/academics" className="footer__link">প্লে ও নার্সারি (প্রাক-প্রাথমিক)</Link>
+                <Link href="/academics#nctb" className="footer__link">জাতীয় শিক্ষাক্রম (NCTB)</Link>
               </li>
               <li>
-                <Link href="/academics" className="footer__link">কেজি শ্রেণি (ভিত্তি গঠন)</Link>
+                <Link href="/academics#english-club" className="footer__link">English Language Club</Link>
               </li>
               <li>
-                <Link href="/academics" className="footer__link">১ম থেকে ৫ম শ্রেণি (প্রাথমিক)</Link>
+                <Link href="/academics#quran-class" className="footer__link">সহীহ কুরআন শিক্ষা ক্লাস</Link>
               </li>
               <li>
-                <Link href="/academics" className="footer__link">৬ষ্ঠ থেকে ৮ম শ্রেণি (মাধ্যমিক ভর্তি)</Link>
+                <Link href="/academics#stages" className="footer__link">প্রাক-প্রাথমিক ও প্রাথমিক</Link>
               </li>
               <li>
-                <Link href="/academics" className="footer__link">৯ম ও ১০ম শ্রেণি (এসএসসি প্রস্তুতি)</Link>
+                <Link href="/academics#stages" className="footer__link">মাধ্যমিক স্তর (৬ষ্ঠ - ১০ম)</Link>
               </li>
             </ul>
           </div>
