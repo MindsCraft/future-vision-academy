@@ -3,21 +3,15 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Phone, Menu, X, ArrowUpRight } from 'lucide-react';
-import { siteConfig } from '@/config/site';
+import { siteConfig, mainNavItems } from '@/config/site';
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
   const phoneNumber = siteConfig.contact.phone || '01713-503854';
   const rawPhone = phoneNumber.replace(/[^0-9]/g, '');
-
-  const navLinks = [
-    { label: 'ভর্তি তথ্য', href: '#admissions', badge: '২০২৬' },
-    { label: 'শিক্ষা কার্যক্রম', href: '#academics' },
-    { label: 'ইংলিশ ক্লাব', href: '#english-club' },
-    { label: 'ক্যাম্পাস সুবিধা', href: '#facilities' },
-    { label: 'যোগাযোগ ও মানচিত্র', href: '#contact' },
-  ];
 
   return (
     <header className="navbar-wrapper">
@@ -37,14 +31,21 @@ export const Navbar: React.FC = () => {
         {/* Desktop Nav */}
         <nav className="navbar__nav" aria-label="প্রধান নেভিগেশন">
           <div className="navbar__menu">
-            {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="navbar__link">
-                <span>{link.label}</span>
-                {link.badge && (
-                  <span className="navbar__link-badge">{link.badge}</span>
-                )}
-              </Link>
-            ))}
+            {mainNavItems.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`navbar__link ${isActive ? 'navbar__link--active' : ''}`}
+                >
+                  <span>{link.label}</span>
+                  {link.badge && (
+                    <span className="navbar__link-badge">{link.badge}</span>
+                  )}
+                </Link>
+              );
+            })}
           </div>
         </nav>
 
@@ -59,7 +60,7 @@ export const Navbar: React.FC = () => {
             <span>{phoneNumber}</span>
           </a>
 
-          <Link href="#admissions" className="navbar__btn-admissions">
+          <Link href="/admissions" className="navbar__btn-admissions">
             <span>ভর্তি আবেদন</span>
             <ArrowUpRight size={15} />
           </Link>
@@ -85,19 +86,24 @@ export const Navbar: React.FC = () => {
       >
         <div className="container">
           <nav className="navbar__mobile-list" aria-label="মোবাইল নেভিগেশন">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="navbar__mobile-link"
-              >
-                <span>{link.label}</span>
-                {link.badge && (
-                  <span className="navbar__link-badge">{link.badge}</span>
-                )}
-              </Link>
-            ))}
+            {mainNavItems.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`navbar__mobile-link ${
+                    isActive ? 'navbar__mobile-link--active' : ''
+                  }`}
+                >
+                  <span>{link.label}</span>
+                  {link.badge && (
+                    <span className="navbar__link-badge">{link.badge}</span>
+                  )}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="navbar__mobile-actions">
@@ -109,7 +115,7 @@ export const Navbar: React.FC = () => {
               <span>সরাসরি কল: {phoneNumber}</span>
             </a>
             <Link
-              href="#admissions"
+              href="/admissions"
               onClick={() => setMobileMenuOpen(false)}
               className="btn btn--primary btn--full"
             >

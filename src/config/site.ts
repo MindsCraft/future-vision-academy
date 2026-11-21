@@ -4,15 +4,15 @@ export const siteConfig: SiteConfig = {
   name: 'Future Vision Academy',
   shortName: 'ফিউচার ভিশন একাডেমি',
   url: 'https://futurevisionacademy.edu.bd',
-  tagline: 'আদর্শ শিক্ষা, শৃঙ্খলা ও আধুনিক ইংরেজি চর্চার নির্ভরযোগ্য বিদ্যাপীঠ',
+  tagline: 'জ্ঞান, শৃঙ্খলা ও আধুনিক ইংরেজি চর্চার আদর্শ বিদ্যাপীঠ',
   description:
-    'গফরগাঁও পৌর শহরের পশু হাসপাতাল রোডে মনোরম ও নিরাপদ পরিবেশে প্লে থেকে ১০ম শ্রেণির আধুনিক শিক্ষা প্রতিষ্ঠান। বাংলা মাধ্যমের পাশাপাশি রয়েছে বিশেষ English Language Club। বর্তমানে প্লে থেকে ৮ম শ্রেণিতে নতুন শিক্ষাবর্ষে ভর্তি চলছে।',
+    'গফরগাঁও পৌর শহরের পশু হাসপাতাল রোডে মনোরম ও সম্পূর্ণ সিসিটিভি নিয়ন্ত্রিত নিরাপদ পরিবেশে প্লে থেকে ১০ম শ্রেণির আধুনিক শিক্ষা প্রতিষ্ঠান। বাংলা মাধ্যমের পাশাপাশি রয়েছে বিশেষ English Language Club। বর্তমানে প্লে থেকে ৮ম শ্রেণিতে নতুন শিক্ষাবর্ষে ভর্তি চলছে।',
   eiin: 'গফরগাঁও, ময়মনসিংহ',
   established: 2025,
   contact: {
     address: '৪২৪, পশু হাসপাতাল রোড, গফরগাঁও পৌরসভা, ময়মনসিংহ, বাংলাদেশ',
     phone: '01713-503854',
-    email: 'info@futurevisionacademy.com',
+    email: 'info@futurevisionacademy.edu.bd',
     hours: 'শনিবার – বৃহস্পতিবার: সকাল ৮:০০ – দুপুর ২:০০',
   },
   socials: {
@@ -30,17 +30,21 @@ export const googleMapsConfig = {
 };
 
 export const mainNavItems: NavItem[] = [
-  { label: 'ভর্তি তথ্য', href: '#admissions', badge: '২০২৬' },
-  { label: 'শ্রেণি কার্যক্রম ও ইংলিশ ক্লাব', href: '#academics' },
-  { label: 'নোটিশ বোর্ড', href: '#notices' },
+  { label: 'হোম', href: '/' },
+  { label: 'পরিচিতি ও শিক্ষক', href: '/about' },
+  { label: 'শিক্ষা কার্যক্রম', href: '/academics' },
+  { label: 'ইংলিশ ক্লাব', href: '/english-club', badge: 'Special' },
+  { label: 'ভর্তি তথ্য', href: '/admissions', badge: '২০২৬' },
+  { label: 'ক্যাম্পাস জীবন', href: '/campus-life' },
+  { label: 'যোগাযোগ', href: '/contact' },
 ];
 
 export const footerNavItems: NavItem[] = [
-  { label: 'মূল পাতা (Home)', href: '#' },
-  { label: 'ভর্তি তথ্য (Admissions)', href: '#admissions' },
-  { label: 'শ্রেণি কার্যক্রম (Academics)', href: '#academics' },
-  { label: 'ইংলিশ ক্লাব (English Club)', href: '#english-club' },
-  { label: 'বাস্তব চিত্র (Photos)', href: '#photos' },
-  { label: 'নোটিশ বোর্ড (Notices)', href: '#notices' },
-  { label: 'যোগাযোগ ও মানচিত্র (Contact)', href: '#contact' },
+  { label: 'মূল পাতা (Home)', href: '/' },
+  { label: 'আমাদের পরিচিতি (About Us)', href: '/about' },
+  { label: 'শিক্ষা কার্যক্রম (Academics)', href: '/academics' },
+  { label: 'ইংলিশ ক্লাব (English Club)', href: '/english-club' },
+  { label: 'ভর্তি তথ্য ২০২৬ (Admissions)', href: '/admissions' },
+  { label: 'ক্যাম্পাস গ্যালারি (Campus Life)', href: '/campus-life' },
+  { label: 'যোগাযোগ ও মানচিত্র (Contact)', href: '/contact' },
 ];

@@ -48,19 +48,22 @@ export const Footer: React.FC = () => {
             <h3 className="footer__title">প্রধান সূচি</h3>
             <ul className="footer__list">
               <li>
-                <Link href="#admissions" className="footer__link">ভর্তি বিজ্ঞপ্তি ২০২৬</Link>
+                <Link href="/" className="footer__link">মূল পাতা (Home)</Link>
               </li>
               <li>
-                <Link href="#academics" className="footer__link">শিক্ষা কার্যক্রম</Link>
+                <Link href="/about" className="footer__link">আমাদের পরিচিতি ও শিক্ষক</Link>
               </li>
               <li>
-                <Link href="#english-club" className="footer__link">English Language Club</Link>
+                <Link href="/academics" className="footer__link">শ্রেণি কার্যক্রম ও কারিকুলাম</Link>
               </li>
               <li>
-                <Link href="#facilities" className="footer__link">ক্যাম্পাস সুযোগ-সুবিধা</Link>
+                <Link href="/english-club" className="footer__link">English Language Club</Link>
               </li>
               <li>
-                <Link href="#notices" className="footer__link">নোটিশ ও সময়সূচি</Link>
+                <Link href="/admissions" className="footer__link">ভর্তি তথ্য ২০২৬</Link>
+              </li>
+              <li>
+                <Link href="/campus-life" className="footer__link">বাস্তব চিত্র ও ক্যাম্পাস জীবন</Link>
               </li>
             </ul>
           </div>
@@ -70,19 +73,19 @@ export const Footer: React.FC = () => {
             <h3 className="footer__title">শিক্ষা স্তর</h3>
             <ul className="footer__list">
               <li>
-                <span className="footer__link">প্লে ও নার্সারি (প্রাক-প্রাথমিক)</span>
+                <Link href="/academics" className="footer__link">প্লে ও নার্সারি (প্রাক-প্রাথমিক)</Link>
               </li>
               <li>
-                <span className="footer__link">কেজি শ্রেণি (ভিত্তি গঠন)</span>
+                <Link href="/academics" className="footer__link">কেজি শ্রেণি (ভিত্তি গঠন)</Link>
               </li>
               <li>
-                <span className="footer__link">১ম থেকে ৫ম শ্রেণি (প্রাথমিক)</span>
+                <Link href="/academics" className="footer__link">১ম থেকে ৫ম শ্রেণি (প্রাথমিক)</Link>
               </li>
               <li>
-                <span className="footer__link">৬ষ্ঠ থেকে ৮ম শ্রেণি (মাধ্যমিক)</span>
+                <Link href="/academics" className="footer__link">৬ষ্ঠ থেকে ৮ম শ্রেণি (মাধ্যমিক ভর্তি)</Link>
               </li>
               <li>
-                <span className="footer__link">৯ম ও ১০ম শ্রেণি (এসএসসি)</span>
+                <Link href="/academics" className="footer__link">৯ম ও ১০ম শ্রেণি (এসএসসি প্রস্তুতি)</Link>
               </li>
             </ul>
           </div>
@@ -123,9 +126,9 @@ export const Footer: React.FC = () => {
         <div className="footer__bottom">
           <p>© {currentYear} {siteConfig.name} ({siteConfig.shortName})। সর্বস্বত্ব সংরক্ষিত।</p>
           <div className="footer__bottom-links">
-            <Link href="#admissions" className="footer__bottom-link">ভর্তি তথ্য</Link>
+            <Link href="/admissions" className="footer__bottom-link">ভর্তি তথ্য</Link>
             <span>•</span>
-            <Link href="#contact" className="footer__bottom-link">ক্যাম্পাস লোকেশন</Link>
+            <Link href="/contact" className="footer__bottom-link">ক্যাম্পাস লোকেশন</Link>
           </div>
         </div>
       </div>

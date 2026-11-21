@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Button Component (Flat, Borderless & Shadowless)
+   Button Component (Friendly, Lively & Accessible)
    ========================================================================== */
 
 .btn {
@@ -25,44 +25,55 @@
 }
 
 .btn--md {
-  padding: 12px 22px;
-  font-size: 0.9375rem;
+  padding: 12px 24px;
+  font-size: 0.95rem;
 }
 
 .btn--lg {
   padding: 14px 28px;
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 
 .btn--full {
   width: 100%;
 }
 
-/* Primary: Solid Jet Black */
+/* Primary: Royal Academy Navy */
 .btn--primary {
-  background-color: var(--color-black);
+  background-color: var(--color-primary-600);
   color: var(--color-white);
 }
 
 .btn--primary:hover {
-  background-color: var(--color-gray-800);
+  background-color: var(--color-primary-700);
   transform: translateY(-1px);
 }
 
-/* Secondary: Subtle Gray Background */
+/* Accent: Sunlit Warm Gold */
+.btn--accent {
+  background-color: var(--color-accent-500);
+  color: var(--color-white);
+}
+
+.btn--accent:hover {
+  background-color: var(--color-accent-600);
+  transform: translateY(-1px);
+}
+
+/* Secondary: Soft Navy Tint */
 .btn--secondary {
-  background-color: var(--color-gray-100);
-  color: var(--color-black);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-700);
 }
 
 .btn--secondary:hover {
-  background-color: var(--color-gray-200);
+  background-color: var(--color-primary-100);
 }
 
-/* Outline style mapped to flat subtle tone (Zero Borders) */
+/* Outline style mapped to flat subtle tone */
 .btn--outline {
   background-color: var(--color-gray-100);
-  color: var(--color-black);
+  color: var(--color-gray-800);
 }
 
 .btn--outline:hover {
@@ -72,22 +83,21 @@
 /* Inverted / White on Dark */
 .btn--inverted {
   background-color: var(--color-white);
-  color: var(--color-black);
+  color: var(--color-primary-700);
 }
 
 .btn--inverted:hover {
-  background-color: var(--color-gray-200);
-}
-
-/* Ghost */
-.btn--ghost {
-  background-color: transparent;
-  color: var(--color-gray-700);
-}
-
-.btn--ghost:hover {
   background-color: var(--color-gray-100);
-  color: var(--color-black);
+}
+
+/* WhatsApp Brand Action */
+.btn--whatsapp {
+  background-color: #25d366;
+  color: #ffffff;
+}
+
+.btn--whatsapp:hover {
+  background-color: #1ebc59;
 }
 
 .btn:disabled {

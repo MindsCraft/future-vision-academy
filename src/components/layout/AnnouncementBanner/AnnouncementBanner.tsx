@@ -26,8 +26,8 @@ export const AnnouncementBanner: React.FC = () => {
             হটলাইন: <strong>{siteConfig.contact.phone || '01713-503854'}</strong>
           </span>
           <span className="announcement-banner__bullet">•</span>
-          <Link href="#admissions" className="announcement-banner__link">
-            <span>ভর্তি নির্দেশিকা</span>
+          <Link href="/admissions" className="announcement-banner__link">
+            <span>ভর্তি নির্দেশিকা ও ফি</span>
             <ArrowRight size={14} className="announcement-banner__link-arrow" />
           </Link>
         </div>
