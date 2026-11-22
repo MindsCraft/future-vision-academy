@@ -125,14 +125,14 @@ export default function AcademicsPage() {
             <div
               id="quran-class"
               style={{
-                background: 'linear-gradient(135deg, #1e3a2b 0%, #15803d 100%)',
+                background: 'linear-gradient(135deg, #111a44 0%, #1d286d 100%)',
                 color: 'var(--color-white)',
                 borderRadius: 'var(--radius-xl)',
                 padding: 'var(--space-2xl)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                boxShadow: '0 12px 30px rgba(21, 128, 61, 0.15)',
+                boxShadow: '0 12px 30px rgba(29, 40, 109, 0.15)',
               }}
             >
               <div>
@@ -141,8 +141,8 @@ export default function AcademicsPage() {
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: '6px',
-                    background: 'rgba(255, 255, 255, 0.15)',
-                    color: '#fef08a',
+                    background: 'rgba(245, 158, 11, 0.2)',
+                    color: 'var(--color-accent-300)',
                     padding: '4px 12px',
                     borderRadius: 'var(--radius-pill)',
                     fontSize: '0.8rem',
@@ -158,21 +158,21 @@ export default function AcademicsPage() {
                   সহীহ কুরআন শিক্ষা ও নৈতিকতা ক্লাস
                 </h3>
 
-                <p style={{ color: '#dcfce7', lineHeight: '1.65', marginBottom: '20px', fontSize: '0.95rem' }}>
+                <p style={{ color: '#e2e8f0', lineHeight: '1.65', marginBottom: '20px', fontSize: '0.95rem' }}>
                   আধুনিক শিক্ষার পাশাপাশি প্রতিটি শিশুর আত্মিক ও নৈতিক বিকাশের লক্ষ্যে সহীহ তিলাওয়াত ও শিষ্টাচার চর্চা।
                 </p>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '24px' }}>
                   <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                    <CheckCircle2 size={16} color="#fef08a" />
+                    <CheckCircle2 size={16} color="var(--color-accent-400)" />
                     <span style={{ fontSize: '0.9rem', color: '#ffffff' }}><strong>সহীহ মাখরাজ ও তাজভীদ:</strong> হরফের সঠিক উচ্চারণ ও কায়দা শিখন</span>
                   </div>
                   <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                    <CheckCircle2 size={16} color="#fef08a" />
+                    <CheckCircle2 size={16} color="var(--color-accent-400)" />
                     <span style={{ fontSize: '0.9rem', color: '#ffffff' }}><strong>ছোট সূরা ও মাসনূন দো&apos;আ:</strong> প্রয়োজনীয় সূরা ও প্রাত্যহিক দো&apos;আ মুখস্থকরণ</span>
                   </div>
                   <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                    <CheckCircle2 size={16} color="#fef08a" />
+                    <CheckCircle2 size={16} color="var(--color-accent-400)" />
                     <span style={{ fontSize: '0.9rem', color: '#ffffff' }}><strong>নৈতিক শিষ্টাচার (আদব):</strong> বড়দের সম্মান, সততা ও মানবিক মূল্যবোধের অনুশীলন</span>
                   </div>
                 </div>

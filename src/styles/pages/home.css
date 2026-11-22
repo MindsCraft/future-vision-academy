@@ -1,34 +1,27 @@
 /* ==========================================================================
-   Future Vision Academy — Lively, Content-Rich & Friendly Home Page Styles
-   Brand Harmony: Royal Academy Navy & Sunlit Golden Amber
+   Future Vision Academy — Human, Grounded & Authentic School Styles
+   Crafted for Real Parents, Teachers & Students in Gafargaon
+   Brand Colors: Royal Academy Navy (#1D286D) + Sunlit Gold (#F59E0B) + Warm Canvas
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Hero Section with Real Photo Feature
+   1. Hero Section (Warm, Welcoming & Grounded)
    -------------------------------------------------------------------------- */
-.home-hero {
-  background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
-  border: none;
-  box-shadow: none;
+.school-hero {
+  background: linear-gradient(180deg, #fbfaf7 0%, #ffffff 100%);
   padding-top: clamp(2.5rem, 5vw, 4rem);
   padding-bottom: clamp(3rem, 6vw, 4.5rem);
   position: relative;
-  overflow: hidden;
 }
 
-.home-hero__container {
-  position: relative;
-  z-index: 1;
-}
-
-.home-hero__grid {
+.school-hero__grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: var(--space-2xl);
   align-items: center;
 }
 
-.home-hero__badge {
+.school-hero__badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -36,14 +29,13 @@
   border-radius: var(--radius-pill);
   background-color: var(--color-accent-50);
   color: var(--color-accent-700);
-  font-size: 0.84rem;
+  font-size: 0.875rem;
   font-weight: 800;
   letter-spacing: 0.02em;
   margin-bottom: var(--space-md);
-  border: none;
 }
 
-.home-hero__badge-dot {
+.school-hero__badge-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -57,30 +49,39 @@
   50% { opacity: 0.3; transform: scale(0.8); }
 }
 
-.home-hero__title {
-  font-size: clamp(2rem, 3.8vw, 3.1rem);
+.school-hero__title {
+  font-size: clamp(2.1rem, 4vw, 3.25rem);
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1.22;
   color: var(--color-primary-800);
   letter-spacing: -0.025em;
   margin-bottom: var(--space-sm);
 }
 
-.home-hero__title-highlight {
-  color: var(--color-accent-500);
-  position: relative;
-  display: inline-block;
+.school-hero__title-highlight {
+  color: var(--color-accent-600);
+  display: inline;
 }
 
-.home-hero__desc {
+.school-hero__location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-md);
+}
+
+.school-hero__desc {
   font-size: clamp(1rem, 1.3vw, 1.15rem);
-  line-height: 1.7;
-  color: var(--color-gray-600);
+  line-height: 1.75;
+  color: var(--color-gray-700);
   margin-bottom: var(--space-xl);
   max-width: 620px;
 }
 
-.home-hero__actions {
+.school-hero__actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -89,16 +90,16 @@
 }
 
 /* Hero Visual Photo Card */
-.home-hero__photo-card {
+.school-hero__photo-wrap {
   position: relative;
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: 0 16px 36px -8px rgba(36, 50, 130, 0.16);
+  box-shadow: 0 20px 40px -10px rgba(29, 40, 109, 0.18);
   background: var(--color-white);
   aspect-ratio: 4 / 3.2;
 }
 
-.home-hero__photo-img {
+.school-hero__photo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -106,59 +107,55 @@
   transition: transform var(--transition-slow);
 }
 
-.home-hero__photo-card:hover .home-hero__photo-img {
-  transform: scale(1.03);
+.school-hero__photo-wrap:hover .school-hero__photo-img {
+  transform: scale(1.02);
 }
 
-.home-hero__photo-badge {
+.school-hero__photo-caption {
   position: absolute;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  padding: 12px 18px;
-  border-radius: var(--radius-md);
+  bottom: 0;
+  inset-inline: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.9) 100%);
+  padding: var(--space-lg) var(--space-md) var(--space-md);
+  color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
 }
 
-.home-hero__photo-badge-title {
-  font-size: 0.925rem;
+.school-hero__photo-title {
+  font-size: 0.95rem;
   font-weight: 800;
-  color: var(--color-primary-800);
+  color: var(--color-white);
 }
 
-.home-hero__photo-badge-sub {
+.school-hero__photo-sub {
   font-size: 0.775rem;
-  color: var(--color-gray-500);
+  color: var(--color-accent-300);
 }
 
-/* Stats Metric Strip (4-Cell Grid) */
-.home-hero__stats {
+/* 4 Metrics Strip (Grounded & Clear) */
+.school-metrics {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background: var(--color-white);
   border-radius: var(--radius-xl);
-  overflow: hidden;
   box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.06);
   margin-top: var(--space-2xl);
+  overflow: hidden;
 }
 
-.home-hero__stat-cell {
+.school-metrics__cell {
   padding: var(--space-xl) var(--space-md);
   text-align: center;
-  border: none;
-  transition: all var(--transition-fast);
+  transition: background-color var(--transition-fast);
 }
 
-.home-hero__stat-cell:hover {
+.school-metrics__cell:hover {
   background-color: var(--color-primary-50);
 }
 
-.home-hero__stat-value {
+.school-metrics__val {
   font-family: var(--font-heading);
   font-size: clamp(1.4rem, 2.3vw, 1.95rem);
   font-weight: 900;
@@ -167,280 +164,38 @@
   margin-bottom: 4px;
 }
 
-.home-hero__stat-label {
-  font-size: 0.8125rem;
+.school-metrics__lbl {
+  font-size: 0.84rem;
   font-weight: 700;
   color: var(--color-gray-600);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
 }
 
 /* --------------------------------------------------------------------------
-   Section Common Headers
+   2. Editorial Story Cards (The 3 Real Pillars)
    -------------------------------------------------------------------------- */
-.section-header {
-  text-align: center;
-  max-width: 720px;
-  margin-inline: auto;
-  margin-bottom: var(--space-2xl);
-}
-
-.section-tag {
-  display: inline-block;
-  font-size: 0.775rem;
-  font-weight: 800;
-  color: var(--color-primary-700);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: var(--space-xs);
-  padding: 4px 14px;
-  background: var(--color-primary-50);
-  border-radius: var(--radius-pill);
-  border: none;
-}
-
-.section-tag--accent {
-  background: var(--color-accent-100);
-  color: var(--color-accent-700);
-}
-
-.section-tag--inverted {
-  background: rgba(255, 255, 255, 0.15);
-  color: var(--color-accent-300);
-}
-
-.section-title {
-  font-size: clamp(1.75rem, 3.2vw, 2.35rem);
-  font-weight: 800;
-  color: var(--color-primary-900);
-  letter-spacing: -0.02em;
-  margin-bottom: var(--space-xs);
-}
-
-.section-title--inverted {
-  color: var(--color-white);
-}
-
-.section-desc {
-  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
-  color: var(--color-gray-600);
-  line-height: 1.65;
-}
-
-.section-desc--inverted {
-  color: var(--color-gray-300);
-}
-
-/* --------------------------------------------------------------------------
-   Photo Showcase Grid (Lively Campus Moments)
-   -------------------------------------------------------------------------- */
-.photo-gallery-preview {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
-  margin-bottom: var(--space-2xl);
-}
-
-.photo-card {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: var(--color-white);
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
-  transition: all var(--transition-normal);
-  aspect-ratio: 4 / 3;
-}
-
-.photo-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px -4px rgba(36, 50, 130, 0.15);
-}
-
-.photo-card__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.photo-card__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(15, 23, 42, 0.85) 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: var(--space-md);
-  color: var(--color-white);
-}
-
-.photo-card__tag {
-  font-size: 0.6875rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: var(--color-accent-300);
-  letter-spacing: 0.05em;
-  margin-bottom: 2px;
-}
-
-.photo-card__caption {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--color-white);
-  line-height: 1.3;
-}
-
-/* --------------------------------------------------------------------------
-   Admissions Spotlight Section
-   -------------------------------------------------------------------------- */
-.admissions-box {
+.story-pillar-card {
   background: var(--color-white);
   border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(36, 50, 130, 0.08);
-}
-
-.admissions-box__top {
-  background: var(--color-primary-700);
-  color: var(--color-white);
-  padding: var(--space-md) var(--space-xl);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-  border: none;
-}
-
-.admissions-box__top-title {
-  font-size: 1.15rem;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.admissions-box__top-badge {
-  background: var(--color-accent-500);
-  color: var(--color-white);
-  font-size: 0.75rem;
-  font-weight: 800;
-  padding: 4px 14px;
-  border-radius: var(--radius-pill);
-}
-
-.admissions-box__grid {
-  display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-}
-
-.admissions-box__main {
   padding: var(--space-2xl);
-  background: var(--color-white);
-}
-
-.admissions-box__headline {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--color-primary-900);
-  margin-bottom: var(--space-sm);
-}
-
-.admissions-box__intro {
-  font-size: 0.95rem;
-  color: var(--color-gray-700);
-  line-height: 1.65;
-  margin-bottom: var(--space-lg);
-}
-
-.admissions-box__criteria-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  margin-bottom: var(--space-xl);
-}
-
-.admissions-box__criteria-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 0.925rem;
-  color: var(--color-gray-800);
-  line-height: 1.55;
-}
-
-.admissions-box__check {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--color-primary-600);
-  color: var(--color-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.admissions-box__sidebar {
-  background: var(--color-primary-50);
-  padding: var(--space-2xl);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.admissions-box__sidebar-title {
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: var(--color-primary-800);
-  margin-bottom: var(--space-lg);
-}
-
-.admissions-box__info-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 0.9rem;
-  color: var(--color-gray-700);
-  margin-bottom: var(--space-lg);
-  line-height: 1.55;
-}
-
-.admissions-box__info-icon {
-  color: var(--color-primary-600);
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.admissions-box__sidebar-actions {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-  margin-top: var(--space-lg);
-}
-
-/* --------------------------------------------------------------------------
-   Core Pillars / Features Grid
-   -------------------------------------------------------------------------- */
-.pillar-card {
-  background: var(--color-white);
-  border-radius: var(--radius-xl);
-  padding: var(--space-xl);
-  display: flex;
-  flex-direction: column;
-  transition: all var(--transition-normal);
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
 }
 
-.pillar-card:hover {
+.story-pillar-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px -4px rgba(36, 50, 130, 0.12);
+  box-shadow: 0 16px 32px -8px rgba(29, 40, 109, 0.12);
 }
 
-.pillar-card__icon-wrap {
-  width: 50px;
-  height: 50px;
+.story-pillar-card--highlight {
+  background: linear-gradient(135deg, #f8faff 0%, #fffdfa 100%);
+  border-top: 4px solid var(--color-accent-500);
+}
+
+.story-pillar-card__icon {
+  width: 52px;
+  height: 52px;
   border-radius: var(--radius-md);
   background: var(--color-primary-50);
   color: var(--color-primary-600);
@@ -450,191 +205,199 @@
   margin-bottom: var(--space-md);
 }
 
-.pillar-card__title {
-  font-size: 1.15rem;
+.story-pillar-card__title {
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--color-primary-900);
   margin-bottom: var(--space-xs);
 }
 
-.pillar-card__desc {
-  font-size: 0.875rem;
-  color: var(--color-gray-600);
-  line-height: 1.6;
+.story-pillar-card__desc {
+  font-size: 0.925rem;
+  color: var(--color-gray-700);
+  line-height: 1.65;
+  margin-bottom: var(--space-lg);
 }
 
-.pillar-card__tag {
-  display: inline-block;
-  margin-top: auto;
-  padding-top: var(--space-md);
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--color-accent-600);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-/* --------------------------------------------------------------------------
-   English Language Club Spotlight (Navy Inverted Banner)
-   -------------------------------------------------------------------------- */
-.english-club-spotlight {
-  background: linear-gradient(135deg, #172054 0%, #243282 100%);
-  color: var(--color-white);
-  border-radius: var(--radius-xl);
-  padding: clamp(2.2rem, 4.5vw, 3.8rem);
-  box-shadow: 0 20px 40px -10px rgba(23, 32, 84, 0.4);
-  position: relative;
-  overflow: hidden;
-}
-
-.english-club__grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: var(--space-2xl);
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-
-.english-club__title {
-  font-size: clamp(1.75rem, 3vw, 2.45rem);
-  font-weight: 900;
-  color: var(--color-white);
-  line-height: 1.25;
-  margin-bottom: var(--space-sm);
-}
-
-.english-club__desc {
-  font-size: 0.98rem;
-  color: #e0e7ff;
-  line-height: 1.7;
-  margin-bottom: var(--space-xl);
-}
-
-.english-club__modules {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
-}
-
-.english-module-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  border-radius: var(--radius-lg);
-  padding: var(--space-md);
-  transition: all var(--transition-fast);
-}
-
-.english-module-card:hover {
-  background: rgba(255, 255, 255, 0.16);
-  transform: translateY(-2px);
-}
-
-.english-module-title {
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--color-accent-300);
-  margin-bottom: 4px;
-}
-
-.english-module-desc {
-  font-size: 0.8125rem;
-  color: #f1f5f9;
-  line-height: 1.5;
-}
-
-/* --------------------------------------------------------------------------
-   Teacher Profiles Spotlight (Meet Our Faculty)
-   -------------------------------------------------------------------------- */
-.teacher-card {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+.story-pillar-card__points {
   display: flex;
   flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: var(--space-md);
+}
+
+.story-pillar-card__point {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--color-gray-800);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   3. Real Moments Photo Strip
+   -------------------------------------------------------------------------- */
+.candid-moments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.candid-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+  aspect-ratio: 4 / 3.2;
+  background: var(--color-white);
   transition: all var(--transition-normal);
 }
 
-.teacher-card:hover {
+.candid-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px -4px rgba(36, 50, 130, 0.12);
+  box-shadow: 0 12px 28px -4px rgba(29, 40, 109, 0.15);
 }
 
-.teacher-card__img-wrap {
-  aspect-ratio: 1;
-  width: 100%;
-  overflow: hidden;
-  background: var(--color-gray-100);
-}
-
-.teacher-card__img {
+.candid-card__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.teacher-card__body {
-  padding: var(--space-lg);
+.candid-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(15, 23, 42, 0.85) 100%);
   display: flex;
   flex-direction: column;
-  flex: 1;
+  justify-content: flex-end;
+  padding: var(--space-lg);
+  color: var(--color-white);
 }
 
-.teacher-card__name {
-  font-size: 1.1rem;
+.candid-card__tag {
+  font-size: 0.725rem;
   font-weight: 800;
-  color: var(--color-primary-900);
+  text-transform: uppercase;
+  color: var(--color-accent-300);
+  letter-spacing: 0.05em;
   margin-bottom: 2px;
 }
 
-.teacher-card__role {
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: var(--color-accent-600);
-  margin-bottom: var(--space-xs);
-}
-
-.teacher-card__desc {
-  font-size: 0.84rem;
-  color: var(--color-gray-600);
-  line-height: 1.55;
-  margin-bottom: var(--space-md);
+.candid-card__title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.35;
 }
 
 /* --------------------------------------------------------------------------
-   Contact & Location Grid
+   4. Clear Admission Roadmap (3 Steps for Parents)
    -------------------------------------------------------------------------- */
-.contact-section-grid {
+.admission-roadmap {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: 0 8px 30px rgba(29, 40, 109, 0.08);
+}
+
+.admission-steps-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-block: var(--space-xl);
+}
+
+.admission-step-box {
+  background: var(--color-primary-50);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.admission-step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-primary-600);
+  color: var(--color-white);
+  font-weight: 900;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.admission-step-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-primary-900);
+  margin-bottom: 6px;
+}
+
+.admission-step-desc {
+  font-size: 0.875rem;
+  color: var(--color-gray-700);
+  line-height: 1.6;
+}
+
+.admission-callout-strip {
+  background: var(--color-accent-50);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.admission-callout-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-accent-700);
+}
+
+/* --------------------------------------------------------------------------
+   5. Location & Direct Contact Section
+   -------------------------------------------------------------------------- */
+.contact-hub-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-2xl);
-  align-items: start;
+  align-items: stretch;
 }
 
-.contact-card {
+.contact-hub-card {
   background: var(--color-white);
   border-radius: var(--radius-xl);
   padding: var(--space-2xl);
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.contact-card__item {
+.contact-hub-item {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 16px;
   margin-bottom: var(--space-lg);
 }
 
-.contact-card__item:last-child {
+.contact-hub-item:last-child {
   margin-bottom: 0;
 }
 
-.contact-card__icon {
-  width: 42px;
-  height: 42px;
-  border-radius: var(--radius-sm);
+.contact-hub-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
   background: var(--color-primary-50);
   color: var(--color-primary-600);
   display: flex;
@@ -643,41 +406,40 @@
   flex-shrink: 0;
 }
 
-.contact-card__label {
+.contact-hub-label {
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-gray-500);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 2px;
 }
 
-.contact-card__value {
-  font-size: 1.05rem;
+.contact-hub-value {
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--color-primary-900);
   line-height: 1.4;
 }
 
-.contact-card__sub {
+.contact-hub-sub {
   font-size: 0.84rem;
   color: var(--color-gray-600);
   margin-top: 2px;
 }
 
-.map-action-card {
+.map-hub-card {
   background: var(--color-primary-50);
   border-radius: var(--radius-xl);
   padding: var(--space-2xl);
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 320px;
+  text-align: center;
 }
 
-.map-action-card__icon {
+.map-hub-icon {
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -687,64 +449,54 @@
   align-items: center;
   justify-content: center;
   margin-bottom: var(--space-md);
-  box-shadow: 0 4px 12px rgba(36, 50, 130, 0.1);
-}
-
-.map-action-card__title {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--color-primary-900);
-  margin-bottom: var(--space-2xs);
-}
-
-.map-action-card__desc {
-  font-size: 0.875rem;
-  color: var(--color-gray-600);
-  max-width: 380px;
-  margin-bottom: var(--space-lg);
-  line-height: 1.55;
+  box-shadow: 0 4px 12px rgba(29, 40, 109, 0.1);
 }
 
 /* --------------------------------------------------------------------------
    Responsive Media Queries
    -------------------------------------------------------------------------- */
 @media (max-width: 960px) {
-  .home-hero__grid,
-  .english-club__grid,
-  .admissions-box__grid,
-  .contact-section-grid {
+  .school-hero__grid,
+  .contact-hub-grid {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
   }
 
-  .home-hero__stats {
+  .school-metrics {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .photo-gallery-preview {
+  .admission-steps-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .candid-moments-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 640px) {
-  .home-hero__stats {
+  .school-metrics {
     grid-template-columns: 1fr;
   }
 
-  .home-hero__actions {
+  .school-hero__actions {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .home-hero__actions .btn {
+  .school-hero__actions .btn {
     width: 100%;
   }
 
-  .photo-gallery-preview {
+  .candid-moments-grid {
     grid-template-columns: 1fr;
   }
 
-  .english-club__modules {
-    grid-template-columns: 1fr;
+  .admission-callout-strip {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
   }
 }
